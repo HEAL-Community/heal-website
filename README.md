@@ -10,7 +10,13 @@ HEAL is a healthcare education and awareness institution focused on advancing he
 
 This repository contains the source code and technical documentation for the official HEAL digital platform.
 
-## Objectives
+## Project Stewardship
+
+The HEAL digital platform is built, architected, and managed solely by **[AbdulRaheem Olurode](https://www.linkedin.com/in/abdulraheemolurode25)**, Founder and Technical Lead of HEAL.
+
+The platform is developed as an institutionally owned digital system, with its architecture, documentation, engineering decisions, and technical direction maintained under HEAL's governance.
+
+## Platform Objectives
 
 The HEAL digital platform is designed to:
 
@@ -81,10 +87,3 @@ heal/
 │
 ├── package.json
 └── package-lock.json
-
-## Project Stewardship
-
-The HEAL digital platform is built, architected, and managed solely by **AbdulRaheem Olurode**, Founder and Technical Lead of HEAL.
-
-The project is developed as an institutionally owned platform, with its architecture, documentation, engineering decisions, and technical direction maintained under HEAL's governance.
----
