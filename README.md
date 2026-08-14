@@ -1,30 +1,34 @@
 # HEAL
 
-Healthcare Education and Awareness Lab (HEAL)
+**Healthcare Education and Awareness Lab (HEAL)**
 
 > Building Healthier Communities Through Communication.
 
-## About
+Founded in **2025**, HEAL is a healthcare education and awareness institution focused on advancing health communication through health education, health journalism, healthcare documentation, digital health, and community engagement.
 
-HEAL is a healthcare education and awareness institution focused on advancing health communication through health education, health journalism, healthcare documentation, digital health, and community engagement.
+This repository contains the source code, technical architecture, and documentation for the official HEAL digital platform.
 
-This repository contains the source code and technical documentation for the official HEAL digital platform.
+---
 
 ## Project Stewardship
 
-The HEAL digital platform is built, architected, and managed solely by **[AbdulRaheem Olurode](https://www.linkedin.com/in/abdulraheemolurode25)**, Founder and Technical Lead of HEAL.
+The HEAL digital platform is built, architected, and managed solely by **AbdulRaheem Olurode**, Founder and Technical Lead of HEAL.
 
-The platform is developed as an institutionally owned digital system, with its architecture, documentation, engineering decisions, and technical direction maintained under HEAL's governance.
+The platform is institutionally owned by HEAL, with its architecture, documentation, engineering decisions, and technical direction maintained under HEAL's governance.
+
+---
 
 ## Platform Objectives
 
-The HEAL digital platform is designed to:
+The HEAL digital platform exists to:
 
 1. Establish HEAL's official institutional presence online.
 2. Communicate HEAL's mission, vision, departments, projects, and institutional work.
 3. Publish and organize health, research, and educational knowledge.
 4. Support community engagement, partnerships, volunteering, and communication.
 5. Provide a scalable digital foundation for HEAL's future programs and services.
+
+---
 
 ## Technology Stack
 
@@ -51,11 +55,11 @@ The HEAL digital platform is designed to:
 
 - SendByte — Email API, notifications, and newsletter infrastructure
 
-### Engineering & Infrastructure
+### Infrastructure
 
 - GitHub — Source Control
 - GitHub Actions — CI/CD
-- Vercel — Application Deployment
+- Vercel — Deployment
 - Cloudflare — DNS and Edge Infrastructure
 
 ### Documentation
@@ -66,7 +70,9 @@ The HEAL digital platform is designed to:
 
 > Turborepo is intentionally deferred from Version 1.0.
 
-## Repository Structure
+---
+
+## Target Repository Structure
 
 ```text
 heal/
@@ -76,12 +82,12 @@ heal/
 │
 ├── packages/
 │   ├── ui/           # Shared UI components
-│   ├── database/     # Database and Drizzle integration
+│   ├── database/     # Neon + Drizzle integration
 │   ├── email/        # SendByte integration
-│   ├── validation/   # Shared validation schemas
+│   ├── validation/   # Shared validation
 │   └── config/       # Shared configuration
 │
-├── docs/             # HEAL documentation
+├── docs/             # Institutional and technical documentation
 ├── scripts/          # Development and maintenance scripts
 ├── .github/          # GitHub workflows and configuration
 │
