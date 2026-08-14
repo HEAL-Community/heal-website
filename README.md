@@ -68,7 +68,7 @@ The HEAL digital platform exists to:
 - Docs-as-Code
 - Git-based version control
 
-> Turborepo is intentionally deferred from Version 1.0.
+> Documentation is not treated as an afterthought right from Version 1.0.
 
 ---
 
