@@ -12,7 +12,7 @@ This repository contains the source code, technical architecture, and documentat
 
 ## Project Stewardship
 
-The HEAL digital platform is built, architected, and managed solely by **AbdulRaheem Olurode**, Founder and Technical Lead of HEAL.
+The HEAL digital platform is built, architected, and managed solely by **AbdulRaheem Olurode**, Founder and Chief Technical Officer of HEAL.
 
 The platform is institutionally owned by HEAL, with its architecture, documentation, engineering decisions, and technical direction maintained under HEAL's governance.
 
