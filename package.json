@@ -17,6 +17,7 @@
     "node": ">=24"
   },
   "dependencies": {
+    "@portabletext/react": "^8.0.0",
     "@sanity/client": "^7.26.2"
   }
 }
