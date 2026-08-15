@@ -15,5 +15,8 @@
   },
   "engines": {
     "node": ">=24"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.26.2"
   }
 }
