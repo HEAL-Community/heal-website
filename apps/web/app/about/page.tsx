@@ -172,7 +172,7 @@ export default function AboutPage() {
 
           <div className="mt-12 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              'Healthcare Education & Awareness',
+              'Healthcare Education',
               'Health Journalism',
               'Healthcare Documentation',
               'Public Health Communication',
