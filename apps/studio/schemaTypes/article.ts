@@ -47,12 +47,12 @@ export const articleType = defineType({
       type: 'string',
       options: {
         list: [
-          {title: 'Health Education', value: 'healthEducation'},
-          {title: 'Health Journalism', value: 'healthJournalism'},
-          {title: 'Healthcare Documentation', value: 'healthcareDocumentation'},
-          {title: 'Opinion', value: 'opinion'},
-          {title: 'Research / Evidence', value: 'research'},
-          {title: 'Explainer', value: 'explainer'},
+          {title: 'Health Education', value: 'Health Education'},
+          {title: 'Health Journalism', value: 'Health Journalism'},
+          {title: 'Healthcare Documentation', value: 'Healthcare Documentation'},
+          {title: 'Opinion', value: 'Opinion'},
+          {title: 'Research / Evidence', value: 'Research / Evidence'},
+          {title: 'Explainer', value: 'Explainer'},
         ],
         layout: 'dropdown',
       },
