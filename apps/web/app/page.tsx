@@ -10,69 +10,72 @@ export default async function Home() {
   return (
     <main>
       {/* Hero */}
-<section className="relative overflow-hidden bg-heal-navy text-white">
-  <div className="absolute inset-0">
-    <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-heal-emerald/20 blur-3xl" />
-    <div className="absolute -bottom-40 left-1/3 h-96 w-96 rounded-full bg-heal-gold/10 blur-3xl" />
-  </div>
-
-  <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-    <div className="max-w-5xl">
-      <div className="mb-8 flex items-center gap-3">
-        <span className="h-px w-10 bg-heal-gold" />
-
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-heal-gold">
-          Healthcare Education & Awareness Lab
-        </p>
-      </div>
-
-      <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-8xl">
-        Building Healthier Communities Through Communication.
-      </h1>
-
-      <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
-        HEAL translates credible healthcare knowledge into accessible
-        education, responsible journalism, documentation, and innovative
-        digital experiences.
-      </p>
-
-      <div className="mt-10 flex flex-wrap gap-4">
-        <Link
-          href="/articles"
-          className="rounded-full bg-heal-emerald px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-heal-emerald/90"
-        >
-          Explore the Knowledge Hub
-        </Link>
-
-        <Link
-          href="/about"
-          className="rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/10"
-        >
-          Discover HEAL
-        </Link>
-      </div>
-    </div>
-
-    <div className="mt-20 grid max-w-4xl gap-8 border-t border-white/15 pt-8 sm:grid-cols-3">
+<section className="border-b border-heal-border bg-white">
+  <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+    <div className="grid items-center gap-16 lg:grid-cols-[1.4fr_0.6fr]">
       <div>
-        <p className="text-sm font-semibold uppercase tracking-wider text-heal-gold">
-          Founded
+        <div className="mb-7 flex items-center gap-3">
+          <span className="h-1 w-10 rounded-full bg-heal-emerald" />
+
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-heal-navy">
+            Healthcare Education & Awareness Lab
+          </p>
+        </div>
+
+        <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-heal-navy sm:text-5xl lg:text-6xl">
+          Better communication
+          <span className="text-heal-emerald"> saves lives.</span>
+        </h1>
+
+        <p className="mt-6 max-w-2xl text-xl font-semibold leading-8 text-heal-navy/80">
+          Building Healthier Communities Through Communication.
         </p>
-        <p className="mt-2 text-2xl font-bold">2025</p>
+
+        <p className="mt-5 max-w-2xl text-base leading-7 text-heal-slate-dark sm:text-lg">
+          HEAL translates credible healthcare knowledge into accessible
+          education, responsible journalism, documentation, and innovative
+          digital experiences.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href="/articles"
+            className="rounded-full bg-heal-navy px-6 py-3 text-sm font-bold text-white transition hover:bg-heal-emerald"
+          >
+            Explore the Knowledge Hub
+          </Link>
+
+          <Link
+            href="/about"
+            className="rounded-full border border-heal-border px-6 py-3 text-sm font-bold text-heal-navy transition hover:border-heal-emerald hover:text-heal-emerald"
+          >
+            Discover HEAL
+          </Link>
+        </div>
       </div>
 
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-wider text-heal-gold">
-          Purpose
-        </p>
-        <p className="mt-2 text-2xl font-bold">Educate. Inform. Innovate.</p>
-      </div>
+      <div className="hidden lg:block">
+        <div className="relative ml-auto max-w-xs">
+          <div className="border-l-2 border-heal-emerald pl-8">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-heal-gold">
+              Our purpose
+            </p>
 
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-wider text-heal-gold">
-          First Studio
-        </p>
-        <p className="mt-2 text-2xl font-bold">Sokoto · 2026</p>
+            <div className="mt-6 space-y-5">
+              <p className="text-2xl font-extrabold text-heal-navy">
+                Educate.
+              </p>
+
+              <p className="text-2xl font-extrabold text-heal-navy">
+                Inform.
+              </p>
+
+              <p className="text-2xl font-extrabold text-heal-navy">
+                Innovate.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
