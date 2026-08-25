@@ -1,73 +1,45 @@
 import Link from "next/link";
 
-const domains = [
+const areas = [
   {
-    title: "Knowledge",
+    title: "Healthcare Education",
     description:
-      "Making healthcare knowledge clearer, more accessible, and more useful.",
-    areas: [
-      {
-        title: "Health Education",
-        text: "Turning complex health information into clear, practical knowledge.",
-      },
-      {
-        title: "Research Communication",
-        text: "Bringing research and evidence beyond academic and professional spaces.",
-      },
-      {
-        title: "Healthcare Documentation",
-        text: "Creating structured resources that preserve, organize, and communicate healthcare knowledge.",
-      },
-    ],
+      "We translate healthcare knowledge into clear, accessible information that helps people understand health, make informed decisions, and engage more confidently with healthcare.",
   },
   {
-    title: "Communication",
+    title: "Health Journalism",
     description:
-      "Connecting evidence, health systems, and communities through purposeful communication.",
-    areas: [
-      {
-        title: "Health Journalism",
-        text: "Responsible reporting and storytelling around healthcare, medicine, and public health.",
-      },
-      {
-        title: "Public Health Communication",
-        text: "Designing communication that helps communities understand and respond to health issues.",
-      },
-    ],
+      "We report, interpret, and tell health stories with accuracy, context, and responsibility, keeping public interest at the centre of healthcare communication.",
   },
   {
-    title: "Technology",
+    title: "Healthcare Documentation",
     description:
-      "Using technology and innovation to expand access to healthcare knowledge.",
-    areas: [
-      {
-        title: "Digital Health",
-        text: "Exploring digital approaches that improve how health information is accessed and experienced.",
-      },
-      {
-        title: "Healthcare Innovation",
-        text: "Developing responsible ideas, systems, and tools for better health communication.",
-      },
-    ],
+      "We turn complex healthcare knowledge, processes, and systems into structured documentation that people and organisations can understand, navigate, and use.",
   },
   {
-    title: "Community",
+    title: "Health Communication",
     description:
-      "Keeping people and the environments in which they live at the centre of our work.",
-    areas: [
-      {
-        title: "Health Awareness",
-        text: "Creating purposeful campaigns that connect health knowledge with everyday communities.",
-      },
-      {
-        title: "Community Engagement",
-        text: "Working with people and institutions to understand needs and create meaningful impact.",
-      },
-      {
-        title: "One Health",
-        text: "Recognizing the interconnected health of people, animals, and the environment.",
-      },
-    ],
+      "We develop campaigns, editorial content, and communication materials designed to move audiences from awareness to understanding and action.",
+  },
+  {
+    title: "Digital Health",
+    description:
+      "We explore and build digital experiences that make healthcare information more accessible, useful, and connected to the people who need it.",
+  },
+  {
+    title: "Research & Knowledge",
+    description:
+      "We support the discovery, synthesis, documentation, and dissemination of healthcare knowledge to strengthen evidence-informed communication.",
+  },
+  {
+    title: "Community Engagement",
+    description:
+      "We create meaningful channels for dialogue between healthcare knowledge, institutions, professionals, and the communities they serve.",
+  },
+  {
+    title: "Healthcare Innovation",
+    description:
+      "We explore new approaches to healthcare education, communication, documentation, and information systems, with technology as an enabler.",
   },
 ];
 
@@ -77,132 +49,86 @@ export default function WhatWeDoPage() {
       {/* HERO */}
       <section className="border-b border-heal-border bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid min-h-[70vh] items-end gap-16 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-32">
-            <div>
+          <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-12 lg:gap-8 lg:py-28">
+            <div className="lg:col-span-8">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-                What we do
+                Our work
               </p>
 
-              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-heal-navy sm:text-6xl lg:text-7xl">
-                Where healthcare
-                <br />
-                meets{" "}
-                <span className="text-heal-emerald">
-                  communication.
-                </span>
+              <h1 className="mt-7 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.04em] text-heal-navy sm:text-6xl lg:text-[64px] xl:text-[76px]">
+                We move healthcare knowledge forward.
               </h1>
             </div>
 
-            <div className="max-w-md border-l-2 border-heal-emerald pl-7 lg:mb-2 lg:ml-auto">
-              <p className="text-lg leading-8 text-heal-slate-dark">
-                HEAL works across knowledge, communication, technology, and
-                community to make healthcare information more accessible,
-                useful, and actionable.
-              </p>
+            <div className="lg:col-span-4 lg:self-end">
+              <div className="max-w-md border-l-2 border-heal-emerald pl-6 sm:pl-7">
+                <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
+                  From evidence and expertise to communication, understanding,
+                  and action, we build the pathways through which healthcare
+                  knowledge reaches people and communities.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* INTRODUCTION */}
-      <section className="bg-heal-surface">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-28">
-          <div className="grid gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-3">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
-                Our work
-              </p>
-            </div>
-
-            <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="max-w-4xl text-3xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-4xl">
-                Communication is the thread connecting everything we do.
-              </h2>
-
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-heal-slate-dark">
-                From education and journalism to digital health and community
-                engagement, our work begins with evidence and is designed to
-                reach people.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DOMAINS */}
+      {/* AREAS OF WORK */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div>
-            {domains.map((domain, index) => (
-              <div
-                key={domain.title}
-                className={`grid gap-10 border-t border-heal-border py-14 lg:grid-cols-12 lg:gap-12 ${
-                  index === domains.length - 1 ? "border-b" : ""
-                }`}
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="border-t border-heal-border">
+            {areas.map((area) => (
+              <article
+                key={area.title}
+                className="grid gap-8 border-b border-heal-border py-14 sm:py-16 lg:grid-cols-12 lg:gap-8 lg:py-20"
               >
-                {/* Domain */}
-                <div className="lg:col-span-4">
-                  <span
-                    className="block h-1.5 w-1.5 rounded-full bg-heal-gold"
-                    aria-hidden="true"
-                  />
-
-                  <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-heal-navy sm:text-4xl">
-                    {domain.title}
+                <div className="lg:col-span-5">
+                  <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-[-0.025em] text-heal-navy sm:text-4xl">
+                    {area.title}
                   </h2>
+                </div>
 
-                  <p className="mt-4 max-w-sm leading-7 text-heal-slate-dark">
-                    {domain.description}
+                <div className="lg:col-span-6 lg:col-start-7">
+                  <p className="max-w-2xl text-lg leading-8 text-heal-slate-dark">
+                    {area.description}
                   </p>
                 </div>
-
-                {/* Areas */}
-                <div className="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:col-span-8">
-                  {domain.areas.map((area) => (
-                    <div key={area.title}>
-                      <h3 className="text-lg font-extrabold text-heal-navy">
-                        {area.title}
-                      </h3>
-
-                      <p className="mt-2 text-sm leading-7 text-heal-slate-dark">
-                        {area.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* APPROACH */}
-      <section className="border-y border-heal-border bg-heal-navy text-white">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-28">
-          <div className="grid gap-12 lg:grid-cols-12">
+      {/* HOW IT CONNECTS */}
+      <section className="border-b border-heal-border bg-heal-surface">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-3">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
-                Our approach
+                How it connects
               </p>
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                Evidence to action.
+              <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-0.03em] text-heal-navy sm:text-5xl">
+                Different disciplines. One purpose.
               </h2>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-                We connect credible knowledge with thoughtful communication,
-                community context, and responsible innovation.
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-heal-slate-dark">
+                These areas are not isolated services. They work together as
+                parts of a broader healthcare knowledge and communication
+                ecosystem.
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-bold tracking-wide text-white sm:text-base">
+              <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-3 text-lg font-bold text-heal-navy sm:text-xl">
                 <span>Evidence</span>
-                <span className="text-heal-gold">→</span>
+                <span className="text-heal-emerald">→</span>
+                <span>Education</span>
+                <span className="text-heal-emerald">→</span>
                 <span>Communication</span>
-                <span className="text-heal-gold">→</span>
+                <span className="text-heal-emerald">→</span>
                 <span>Community</span>
-                <span className="text-heal-gold">→</span>
+                <span className="text-heal-emerald">→</span>
                 <span>Action</span>
               </div>
             </div>
@@ -210,29 +136,34 @@ export default function WhatWeDoPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-white">
+      {/* COLLABORATE */}
+      <section className="border-t border-heal-border bg-heal-navy text-white">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div className="max-w-4xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-              Work with HEAL
-            </p>
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-3">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Build with us
+              </p>
+            </div>
 
-            <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-5xl">
-              Better health communication requires collaboration.
-            </h2>
+            <div className="lg:col-span-8 lg:col-start-5">
+              <h2 className="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
+                Healthcare knowledge is stronger when we build it together.
+              </h2>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-heal-slate-dark">
-              We work with healthcare professionals, researchers, institutions,
-              communities, and organizations committed to healthier societies.
-            </p>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+                We welcome healthcare professionals, researchers, institutions,
+                journalists, creators, technologists, and communities who want
+                to contribute to a better health information ecosystem.
+              </p>
 
-            <Link
-              href="/get-involved"
-              className="mt-9 inline-flex border-b-2 border-heal-emerald pb-1 text-sm font-bold text-heal-navy transition hover:text-heal-emerald"
-            >
-              Work with HEAL →
-            </Link>
+              <Link
+                href="/get-involved"
+                className="mt-10 inline-flex border-b-2 border-heal-emerald pb-1 text-sm font-bold text-white transition-colors hover:text-heal-emerald"
+              >
+                Explore collaboration →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
