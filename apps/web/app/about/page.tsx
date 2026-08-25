@@ -1,330 +1,244 @@
+import Link from "next/link";
+
+const principles = [
+  {
+    title: "Integrity",
+    text: "Communicate truthfully.",
+  },
+  {
+    title: "Evidence",
+    text: "Ground the work in credible knowledge.",
+  },
+  {
+    title: "Accessibility",
+    text: "Make knowledge usable.",
+  },
+  {
+    title: "Innovation",
+    text: "Build better ways to communicate.",
+  },
+  {
+    title: "Collaboration",
+    text: "Work across disciplines and communities.",
+  },
+  {
+    title: "Service",
+    text: "Keep people at the centre.",
+  },
+];
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white text-zinc-900">
-      {/* Hero */}
-      <section className="border-b border-zinc-200">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            Healthcare Education and Awareness Lab
-          </p>
-
-          <h1 className="mt-6 max-w-5xl text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-            Building Healthier Communities Through Communication.
-          </h1>
-
-          <p className="mt-8 max-w-3xl text-xl leading-8 text-zinc-600">
-            HEAL is a mission-driven health communication institution focused
-            on making healthcare knowledge more accessible, understandable,
-            responsible, and useful to the communities it serves.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-3 text-sm text-zinc-500">
-            <span>Established 2025</span>
-            <span>•</span>
-            <span>Sokoto Studio · 2026</span>
-          </div>
-        </div>
-      </section>
-
-      {/* The Beginning */}
-      <section>
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[0.8fr_1.4fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-              The beginning
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Better communication saves lives.
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-lg leading-8 text-zinc-600">
-            <p>
-              HEAL began in 2025 from a growing recognition that healthcare
-              knowledge only creates meaningful impact when people can access,
-              understand, trust, and use it.
-            </p>
-
-            <p>
-              Its formative period involved studying health communication
-              challenges, misinformation trends, public-health communication,
-              and the role of technology in improving how healthcare knowledge
-              reaches communities.
-            </p>
-
-            <p>
-              These experiences shaped the foundation for an institution built
-              around a simple conviction: better communication saves lives.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* From Experience to Institution */}
-      <section className="bg-zinc-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-              From experience to institution
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Built from real healthcare communication experience.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-zinc-600">
-              HEAL's foundation grew through exposure to public health,
-              healthcare research, journalism, One Health, technology,
-              documentation, and innovation.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {[
-              {
-                title: 'Public Health',
-                text: 'Experience in public-health communication helped shape HEAL’s commitment to accessible and responsible health information.',
-              },
-              {
-                title: 'One Health',
-                text: 'Exposure to One Health strengthened the understanding that human, animal, and environmental health are interconnected.',
-              },
-              {
-                title: 'Health Journalism',
-                text: 'Journalistic experience reinforced the importance of evidence, responsibility, clarity, and public trust in healthcare communication.',
-              },
-              {
-                title: 'Technology & Documentation',
-                text: 'Technology, digital health, and healthcare documentation provide the infrastructure for creating, organizing, and distributing knowledge.',
-              },
-            ].map((item) => (
-              <article
-                key={item.title}
-                className="rounded-2xl border border-zinc-200 bg-white p-7"
-              >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-4 leading-7 text-zinc-600">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What HEAL Is */}
-      <section className="bg-zinc-950 text-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
-            What HEAL is
-          </p>
-
-          <h2 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight sm:text-5xl">
-            More than a content agency.
-          </h2>
-
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
-            HEAL is being developed as an institution for healthcare
-            communication, education, documentation, journalism, research,
-            public health, digital health, and innovation.
-          </p>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                number: '01',
-                title: 'Educate',
-                text: 'Translate credible healthcare knowledge into accessible education and awareness.',
-              },
-              {
-                number: '02',
-                title: 'Inform',
-                text: 'Communicate healthcare information responsibly through journalism, documentation, and storytelling.',
-              },
-              {
-                number: '03',
-                title: 'Innovate',
-                text: 'Use technology, creativity, research, and new approaches to improve healthcare communication.',
-              },
-            ].map((item) => (
-              <article
-                key={item.number}
-                className="rounded-2xl border border-white/10 p-7"
-              >
-                <span className="text-sm text-zinc-500">{item.number}</span>
-                <h3 className="mt-5 text-2xl font-semibold">{item.title}</h3>
-                <p className="mt-4 leading-7 text-zinc-400">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Areas of Work */}
-      <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            Areas of work
-          </p>
-
-          <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
-            Connecting knowledge, communication, and innovation.
-          </h2>
-
-          <div className="mt-12 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              'Healthcare Education',
-              'Health Journalism',
-              'Healthcare Documentation',
-              'Public Health Communication',
-              'Digital Health',
-              'One Health',
-              'Research Communication',
-              'Healthcare Innovation',
-            ].map((item) => (
-              <div
-                key={item}
-                className="border-t border-zinc-200 pt-5 text-lg font-medium"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How We Work */}
-      <section className="bg-zinc-50">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-              How we work
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              One idea. Many channels. One message.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-zinc-600">
-              HEAL approaches communication as a system rather than as
-              isolated pieces of content.
-            </p>
-          </div>
-
-          <div className="space-y-5">
-            {[
-              ['Create', 'Develop evidence-informed healthcare communication.'],
-              ['Document', 'Build structured and reusable knowledge resources.'],
-              ['Repurpose', 'Adapt knowledge across platforms and audiences without losing its core message.'],
-              ['Distribute', 'Use digital platforms and community channels to reach people where they are.'],
-              ['Learn', 'Study outcomes, feedback, and communication challenges to improve future work.'],
-            ].map(([title, text]) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-zinc-200 bg-white p-6"
-              >
-                <h3 className="font-semibold">{title}</h3>
-                <p className="mt-2 text-zinc-600">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sokoto Studio */}
-      <section>
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-              Sokoto Studio
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              The beginning of HEAL's operational journey.
-            </h2>
-
-            <div className="mt-6 space-y-6 text-lg leading-8 text-zinc-600">
-              <p>
-                HEAL Sokoto Studio is the first operational studio in the
-                institution's planned growth model, with its launch scheduled
-                for September 2026.
-              </p>
-
-              <p>
-                The Studio provides a practical environment for healthcare
-                education, health journalism, content creation, documentation,
-                digital health, community engagement, and innovation.
-              </p>
-
-              <p>
-                Sokoto is the beginning of the operational journey, while the
-                long-term vision extends across Nigeria and Africa.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center rounded-3xl bg-zinc-950 p-8 text-white">
+    <main>
+      {/* HERO */}
+      <section className="border-b border-heal-border bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid min-h-[72vh] items-end gap-16 py-24 lg:grid-cols-[1.15fr_0.85fr] lg:py-32">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                Growth model
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+                About HEAL
               </p>
 
-              <p className="mt-6 text-3xl font-semibold leading-tight">
-                Pilot.
+              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-heal-navy sm:text-6xl lg:text-7xl">
+                Better communication
                 <br />
-                Learn.
-                <br />
-                Document.
-                <br />
-                Replicate.
-                <br />
-                Scale.
+                <span className="text-heal-emerald">saves lives.</span>
+              </h1>
+            </div>
+
+            <div className="max-w-md border-l-2 border-heal-emerald pl-7 lg:mb-2 lg:ml-auto">
+              <p className="text-lg leading-8 text-heal-slate-dark">
+                HEAL is a health communication institution working across
+                education, journalism, documentation, public health, digital
+                health, and innovation.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Promise */}
-      <section className="border-y border-zinc-200 bg-zinc-50">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            The HEAL Promise
-          </p>
+      {/* WHY WE EXIST */}
+      <section className="bg-heal-surface">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-3">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Why we exist
+              </p>
+            </div>
 
-          <h2 className="mt-6 text-3xl font-semibold tracking-tight sm:text-5xl">
-            Communication with purpose.
-          </h2>
+            <div className="lg:col-span-8 lg:col-start-5">
+              <h2 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-5xl">
+                Healthcare knowledge should not stop where expertise ends.
+              </h2>
 
-          <div className="mt-10 space-y-4 text-lg leading-8 text-zinc-600">
-            <p>Communicate with integrity.</p>
-            <p>Innovate with purpose.</p>
-            <p>Build with responsibility.</p>
-            <p>Serve communities with evidence.</p>
-            <p>Pursue impact with humility.</p>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-heal-slate-dark">
+                We bridge evidence and communities through communication that
+                is clear, credible, accessible, and purposeful.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Closing */}
+      {/* PURPOSE */}
+      <section className="border-y border-heal-border bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+                Our purpose
+              </p>
+
+              <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-heal-navy sm:text-5xl">
+                Educate. Inform. Innovate.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-base leading-7 text-heal-slate-dark md:text-right">
+              Three words. One institutional direction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ORIGIN */}
+      <section className="bg-heal-navy text-white">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Where we began
+              </p>
+
+              <h2 className="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl">
+                Sokoto · 2025
+              </h2>
+            </div>
+
+            <div>
+              <p className="max-w-2xl text-xl leading-8 text-slate-200">
+                HEAL began with a simple conviction: communication is part of
+                healthcare infrastructure.
+              </p>
+
+              <div className="mt-14 grid gap-8 border-t border-white/15 pt-8 sm:grid-cols-3">
+                <div>
+                  <p className="text-3xl font-extrabold text-heal-gold">
+                    2025
+                  </p>
+                  <p className="mt-2 text-sm text-slate-300">Founded</p>
+                </div>
+
+                <div>
+                  <p className="text-3xl font-extrabold text-heal-gold">
+                    2026
+                  </p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    Sokoto Studio
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-3xl font-extrabold text-heal-gold">
+                    Beyond
+                  </p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    Nigeria → Africa
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BELIEF */}
       <section className="bg-white">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            HEAL
-          </p>
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="max-w-4xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+              What we believe
+            </p>
 
-          <h2 className="mt-6 text-4xl font-semibold tracking-tight sm:text-6xl">
-            To Educate.
-            <br />
-            To Inform.
-            <br />
-            To Innovate.
-          </h2>
+            <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-5xl">
+              Evidence deserves clarity.
+              <br />
+              Communities deserve access.
+              <br />
+              Communication deserves responsibility.
+            </h2>
+          </div>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-600">
-            Building Healthier Communities Through Communication.
-          </p>
+          <div className="mt-16 grid border-t border-heal-border sm:grid-cols-2 lg:grid-cols-3">
+            {principles.map((principle) => (
+              <div
+                key={principle.title}
+                className="border-b border-heal-border py-8 sm:px-8 lg:px-7"
+              >
+                <h3 className="text-xl font-extrabold text-heal-navy">
+                  {principle.title}
+                </h3>
+
+                <p className="mt-2 text-sm leading-7 text-heal-slate-dark">
+                  {principle.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LOOKING AHEAD */}
+      <section className="border-y border-heal-border bg-heal-surface">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="max-w-5xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+              Looking ahead
+            </p>
+
+            <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-5xl lg:text-6xl">
+              From Sokoto, forward.
+            </h2>
+
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-heal-slate-dark">
+              Building an institution for better health communication—locally
+              rooted, nationally relevant, and ultimately African in reach.
+            </p>
+
+            <Link
+              href="/get-involved"
+              className="mt-10 inline-flex border-b-2 border-heal-emerald pb-1 text-sm font-bold text-heal-navy transition hover:text-heal-emerald"
+            >
+              Build with HEAL →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING */}
+      <section className="bg-heal-navy text-white">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Healthcare Education & Awareness Lab (HEAL)
+              </p>
+
+              <p className="mt-4 text-2xl font-extrabold sm:text-3xl">
+                Building Healthier Communities Through Communication.
+              </p>
+            </div>
+
+            <Link
+              href="/articles"
+              className="text-sm font-bold text-white transition hover:text-heal-gold"
+            >
+              Explore the Knowledge Hub →
+            </Link>
+          </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
