@@ -10,86 +10,73 @@ export default async function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="border-b bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <p className="mb-6 text-sm font-semibold uppercase tracking-widest text-gray-500">
-            Healthcare Education and Awareness Lab
-          </p>
+<section className="relative overflow-hidden bg-heal-navy text-white">
+  <div className="absolute inset-0">
+    <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-heal-emerald/20 blur-3xl" />
+    <div className="absolute -bottom-40 left-1/3 h-96 w-96 rounded-full bg-heal-gold/10 blur-3xl" />
+  </div>
 
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-gray-900 md:text-7xl">
-            Building Healthier Communities Through Communication.
-          </h1>
+  <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+    <div className="max-w-5xl">
+      <div className="mb-8 flex items-center gap-3">
+        <span className="h-px w-10 bg-heal-gold" />
 
-          <p className="mt-8 max-w-2xl text-xl leading-8 text-gray-600">
-            HEAL is a healthcare communication institution focused on education,
-            awareness, journalism, documentation, and evidence-based health
-            information.
-          </p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-heal-gold">
+          Healthcare Education & Awareness Lab
+        </p>
+      </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/articles"
-              className="rounded-full bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800"
-            >
-              Explore Publications
-            </Link>
+      <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-8xl">
+        Building Healthier Communities Through Communication.
+      </h1>
 
-            <Link
-              href="/about"
-              className="rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
-            >
-              About HEAL
-            </Link>
-          </div>
-        </div>
-      </section>
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
+        HEAL translates credible healthcare knowledge into accessible
+        education, responsible journalism, documentation, and innovative
+        digital experiences.
+      </p>
 
-      {/* What we do */}
-      <section className="border-b bg-gray-50">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gray-500">
-            What We Do
-          </p>
+      <div className="mt-10 flex flex-wrap gap-4">
+        <Link
+          href="/articles"
+          className="rounded-full bg-heal-emerald px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-heal-emerald/90"
+        >
+          Explore the Knowledge Hub
+        </Link>
 
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900">
-            Healthcare communication with purpose.
-          </h2>
+        <Link
+          href="/about"
+          className="rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          Discover HEAL
+        </Link>
+      </div>
+    </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: 'Health Education',
-                text: 'Clear, accessible health information designed to improve understanding and informed decision-making.',
-              },
-              {
-                title: 'Health Journalism',
-                text: 'Responsible reporting and storytelling around healthcare, public health, research, and medicine.',
-              },
-              {
-                title: 'Healthcare Documentation',
-                text: 'Structured healthcare documentation that makes complex information easier to understand and use.',
-              },
-              {
-                title: 'Digital Health',
-                text: 'Technology-enabled approaches to healthcare communication, education, and information access.',
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-gray-200 bg-white p-6"
-              >
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {item.title}
-                </h3>
+    <div className="mt-20 grid max-w-4xl gap-8 border-t border-white/15 pt-8 sm:grid-cols-3">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-heal-gold">
+          Founded
+        </p>
+        <p className="mt-2 text-2xl font-bold">2025</p>
+      </div>
 
-                <p className="mt-3 leading-7 text-gray-600">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-heal-gold">
+          Purpose
+        </p>
+        <p className="mt-2 text-2xl font-bold">Educate. Inform. Innovate.</p>
+      </div>
+
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-heal-gold">
+          First Studio
+        </p>
+        <p className="mt-2 text-2xl font-bold">Sokoto · 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Featured */}
       {featuredArticles.length > 0 && (
