@@ -3,30 +3,30 @@ import Link from "next/link";
 const navigation = [
   { label: "About", href: "/about" },
   { label: "What We Do", href: "/what-we-do" },
-  { label: "Knowledge Hub", href: "/articles" },
+  { label: "Knowledge", href: "/articles" },
   { label: "Initiatives", href: "/initiatives" },
 ];
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-heal-border bg-white/95 backdrop-blur">
+      <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Brand */}
         <Link
           href="/"
           className="group flex items-center gap-3"
           aria-label="HEAL Community home"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-heal-navy text-sm font-extrabold tracking-tight text-white">
+          <div className="flex h-9 w-9 items-center justify-center border border-heal-navy text-sm font-extrabold tracking-tight text-heal-navy transition group-hover:border-heal-emerald group-hover:text-heal-emerald">
             H
           </div>
 
           <div className="leading-none">
-            <div className="text-lg font-extrabold tracking-tight text-heal-navy">
+            <div className="text-lg font-extrabold tracking-[-0.03em] text-heal-navy">
               HEAL
             </div>
 
-            <div className="mt-1 hidden text-[9px] font-semibold uppercase tracking-[0.16em] text-heal-slate sm:block">
+            <div className="mt-1 hidden text-[8px] font-semibold uppercase tracking-[0.14em] text-heal-slate sm:block">
               Healthcare Education & Awareness Lab
             </div>
           </div>
@@ -34,37 +34,41 @@ export default function SiteHeader() {
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden items-center gap-8 lg:flex"
+          className="hidden items-center gap-9 lg:flex"
           aria-label="Primary navigation"
         >
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold text-heal-slate-dark transition hover:text-heal-emerald"
+              className="group relative py-2 text-[13px] font-semibold text-heal-slate-dark transition-colors hover:text-heal-emerald"
             >
               {item.label}
+
+              <span className="absolute bottom-0 left-0 h-px w-0 bg-heal-emerald transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
 
+          <span className="ml-1 h-5 w-px bg-heal-border" />
+
           <Link
             href="/get-involved"
-            className="rounded-full bg-heal-navy px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-heal-emerald"
+            className="text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald"
           >
-            Get Involved
+            Get involved →
           </Link>
         </nav>
 
         {/* Mobile menu button */}
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-heal-border text-heal-navy transition hover:border-heal-emerald hover:text-heal-emerald lg:hidden"
+          className="flex h-9 w-9 items-center justify-center text-heal-navy transition-colors hover:text-heal-emerald lg:hidden"
           aria-label="Open navigation menu"
         >
-          <span className="flex flex-col gap-1.5">
-            <span className="block h-0.5 w-5 bg-current" />
-            <span className="block h-0.5 w-5 bg-current" />
-            <span className="block h-0.5 w-5 bg-current" />
+          <span className="flex flex-col gap-[5px]">
+            <span className="block h-px w-5 bg-current" />
+            <span className="block h-px w-5 bg-current" />
+            <span className="block h-px w-5 bg-current" />
           </span>
         </button>
       </div>
