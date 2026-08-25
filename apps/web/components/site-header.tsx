@@ -9,39 +9,39 @@ const navigation = [
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-heal-border bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-heal-border/80 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Brand */}
         <Link
           href="/"
-          className="group flex items-center gap-3"
+          className="group flex items-center gap-3.5"
           aria-label="HEAL Community home"
         >
-          <div className="flex h-9 w-9 items-center justify-center border border-heal-navy text-sm font-extrabold tracking-tight text-heal-navy transition group-hover:border-heal-emerald group-hover:text-heal-emerald">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center border border-heal-navy text-sm font-extrabold tracking-tight text-heal-navy transition-colors duration-300 group-hover:border-heal-emerald group-hover:text-heal-emerald">
             H
           </div>
 
           <div className="leading-none">
-            <div className="text-lg font-extrabold tracking-[-0.03em] text-heal-navy">
+            <div className="text-[19px] font-extrabold tracking-[-0.035em] text-heal-navy">
               HEAL
             </div>
 
-            <div className="mt-1 hidden text-[8px] font-semibold uppercase tracking-[0.14em] text-heal-slate sm:block">
-              Healthcare Education & Awareness Lab
+            <div className="mt-1 hidden text-[8px] font-semibold uppercase tracking-[0.13em] text-heal-slate sm:block">
+              Healthcare Education & Awareness Lab (HEAL)
             </div>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden items-center gap-9 lg:flex"
+          className="hidden items-center gap-8 lg:flex"
           aria-label="Primary navigation"
         >
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="group relative py-2 text-[13px] font-semibold text-heal-slate-dark transition-colors hover:text-heal-emerald"
+              className="group relative py-2 text-[13px] font-semibold text-heal-slate-dark transition-colors duration-200 hover:text-heal-emerald"
             >
               {item.label}
 
@@ -49,13 +49,19 @@ export default function SiteHeader() {
             </Link>
           ))}
 
-          <span className="ml-1 h-5 w-px bg-heal-border" />
+          <span
+            className="ml-1 h-5 w-px bg-heal-border"
+            aria-hidden="true"
+          />
 
           <Link
             href="/get-involved"
-            className="text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald"
+            className="group text-[13px] font-bold text-heal-navy transition-colors duration-200 hover:text-heal-emerald"
           >
-            Get involved →
+            Get involved
+            <span className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </Link>
         </nav>
 
@@ -65,7 +71,7 @@ export default function SiteHeader() {
           className="flex h-9 w-9 items-center justify-center text-heal-navy transition-colors hover:text-heal-emerald lg:hidden"
           aria-label="Open navigation menu"
         >
-          <span className="flex flex-col gap-[5px]">
+          <span className="flex flex-col gap-[5px]" aria-hidden="true">
             <span className="block h-px w-5 bg-current" />
             <span className="block h-px w-5 bg-current" />
             <span className="block h-px w-5 bg-current" />
