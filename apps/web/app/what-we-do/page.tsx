@@ -46,32 +46,36 @@ const areas = [
 export default function WhatWeDoPage() {
   return (
     <main>
-      {/* HERO */}
-      <section className="border-b border-heal-border bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-12 lg:gap-8 lg:py-28">
-            <div className="lg:col-span-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-                Our work
-              </p>
+{/* HERO */}
+<section className="heal-ambient heal-grid heal-grain relative border-b border-heal-border bg-white">
+  <div className="heal-orb -right-24 -top-24" />
 
-              <h1 className="mt-7 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.04em] text-heal-navy sm:text-6xl lg:text-[64px] xl:text-[76px]">
-                We move healthcare knowledge forward.
-              </h1>
-            </div>
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="relative grid gap-14 py-20 sm:py-24 lg:grid-cols-12 lg:gap-8 lg:py-28">
+      <div className="relative z-10 lg:col-span-8">
+        <p className="heal-reveal text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+          Our work
+        </p>
 
-            <div className="lg:col-span-4 lg:self-end">
-              <div className="max-w-md border-l-2 border-heal-emerald pl-6 sm:pl-7">
-                <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
-                  From evidence and expertise to communication, understanding,
-                  and action, we build the pathways through which healthcare
-                  knowledge reaches people and communities.
-                </p>
-              </div>
-            </div>
-          </div>
+        <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.04em] text-heal-navy sm:text-6xl lg:text-[64px] xl:text-[76px]">
+          We move healthcare knowledge forward.
+        </h1>
+      </div>
+
+      <div className="relative z-10 lg:col-span-4 lg:self-end">
+        <div className="heal-glass heal-interactive heal-reveal heal-reveal-delay-2 max-w-md border-l-2 border-l-heal-emerald p-6 sm:p-7">
+          <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
+            From evidence and expertise to communication, understanding, and
+            action, we build the pathways through which healthcare knowledge
+            reaches people and communities.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* AREAS OF WORK */}
       <section className="bg-white">
