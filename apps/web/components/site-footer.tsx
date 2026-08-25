@@ -7,16 +7,34 @@ const exploreLinks = [
   { label: "Initiatives", href: "/initiatives" },
 ];
 
-const connectLinks = [
-  { label: "Get Involved", href: "/get-involved" },
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    icon: "https://cdn.simpleicons.org/linkedin",
+  },
+  {
+    label: "Facebook",
+    icon: "https://cdn.simpleicons.org/facebook",
+  },
+  {
+    label: "X",
+    icon: "https://cdn.simpleicons.org/x",
+  },
+  {
+    label: "Instagram",
+    icon: "https://cdn.simpleicons.org/instagram",
+  },
+  {
+    label: "Threads",
+    icon: "https://cdn.simpleicons.org/threads",
+  },
 ];
 
 export default function SiteFooter() {
   return (
     <footer className="bg-heal-navy text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Main footer */}
-        <div className="grid gap-14 py-20 lg:grid-cols-[1.5fr_0.75fr_0.75fr_1fr] lg:py-24">
+        <div className="grid gap-14 py-20 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr] lg:py-24">
           {/* Brand */}
           <div className="max-w-md">
             <Link
@@ -65,36 +83,38 @@ export default function SiteFooter() {
             </nav>
           </div>
 
-          {/* Connect */}
+          {/* Social */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Connect
+              Follow HEAL
             </p>
 
             <nav
               className="mt-5 flex flex-col gap-3"
-              aria-label="Connect navigation"
+              aria-label="HEAL social media"
             >
-              {connectLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="w-fit text-sm text-slate-300 transition-colors hover:text-white"
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href="#"
+                  aria-label={`Follow HEAL on ${social.label}`}
+                  className="group flex w-fit items-center gap-3 text-sm text-slate-300 transition-colors hover:text-white"
                 >
-                  {link.label}
-                </Link>
-              ))}
+                  <img
+                    src={social.icon}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="h-4 w-4 brightness-0 invert opacity-70 transition-opacity group-hover:opacity-100"
+                  />
 
-              <a
-                href="mailto:hello@healcommunity.net"
-                className="w-fit text-sm text-slate-300 transition-colors hover:text-white"
-              >
-                Email HEAL
-              </a>
+                  <span>{social.label}</span>
+                </a>
+              ))}
             </nav>
           </div>
 
-          {/* WhatsApp */}
+          {/* Community */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
               Community
@@ -109,12 +129,20 @@ export default function SiteFooter() {
               community updates on WhatsApp.
             </p>
 
-            <div className="mt-5 flex flex-col gap-3">
-              <span className="text-sm font-semibold text-slate-400">
+            <div className="mt-6 flex flex-col gap-3">
+              <span className="flex items-center gap-3 text-sm font-semibold text-slate-400">
+                <span
+                  className="h-2 w-2 rounded-full bg-heal-emerald"
+                  aria-hidden="true"
+                />
                 WhatsApp Channel
               </span>
 
-              <span className="text-sm font-semibold text-slate-400">
+              <span className="flex items-center gap-3 text-sm font-semibold text-slate-400">
+                <span
+                  className="h-2 w-2 rounded-full bg-heal-emerald"
+                  aria-hidden="true"
+                />
                 WhatsApp Community
               </span>
             </div>
