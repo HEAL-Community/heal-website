@@ -322,15 +322,15 @@ export default async function Home() {
                 knowledge with understanding, and understanding with action.
               </p>
 
-              <div className="mt-14 flex flex-wrap items-center gap-x-5 gap-y-4 text-2xl font-extrabold text-heal-navy sm:text-3xl">
-                <span>Evidence</span>
-                <span className="text-heal-emerald">→</span>
-                <span>Communication</span>
-                <span className="text-heal-emerald">→</span>
-                <span>Community</span>
-                <span className="text-heal-emerald">→</span>
-                <span>Action</span>
-              </div>
+              <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-bold tracking-wide text-heal-navy sm:text-base">
+  <span>Evidence</span>
+  <span className="text-heal-emerald">→</span>
+  <span>Communication</span>
+  <span className="text-heal-emerald">→</span>
+  <span>Community</span>
+  <span className="text-heal-emerald">→</span>
+  <span>Action</span>
+</div>
             </div>
           </div>
         </div>
