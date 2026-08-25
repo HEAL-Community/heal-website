@@ -63,77 +63,50 @@ export default async function Home() {
 
   return (
     <main>
-      {/* ─────────────────────────────────────────────
-          HERO
-      ───────────────────────────────────────────── */}
+      {/* HERO */}
+<section className="border-b border-heal-border bg-white">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="grid min-h-[calc(100vh-76px)] items-center gap-16 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:gap-24 lg:py-24">
+      {/* Statement */}
+      <div>
+        <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+          Healthcare Education & Awareness Lab
+        </p>
 
-      <section className="border-b border-heal-border bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div className="grid items-end gap-16 lg:grid-cols-[1.35fr_0.65fr]">
-            <div>
-              <p className="mb-8 text-sm font-bold uppercase tracking-[0.18em] text-heal-emerald">
-                Healthcare Education & Awareness Lab
-              </p>
+        <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-heal-navy sm:text-6xl lg:text-7xl xl:text-[84px]">
+          Better communication
+          <br />
+          <span className="text-heal-emerald">saves lives.</span>
+        </h1>
 
-              <h1 className="max-w-5xl text-5xl font-extrabold leading-[1.02] tracking-tight text-heal-navy sm:text-6xl lg:text-7xl">
-                Better communication
-                <span className="text-heal-emerald"> saves lives.</span>
-              </h1>
+        <p className="mt-9 max-w-xl text-lg font-medium leading-8 text-heal-navy/75 sm:text-xl">
+          Building Healthier Communities Through Communication.
+        </p>
+      </div>
 
-              <p className="mt-8 max-w-2xl text-xl font-semibold leading-8 text-heal-navy/80">
-                Building Healthier Communities Through Communication.
-              </p>
-            </div>
+      {/* Institutional introduction */}
+      <div className="lg:mb-2">
+        <div className="max-w-md border-l-2 border-heal-emerald pl-7 lg:ml-auto">
+          <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
+            HEAL bridges the gap between credible healthcare knowledge and the
+            communities that need it through education, journalism,
+            documentation, communication, and technology.
+          </p>
 
-            <div className="border-l border-heal-border pl-7 lg:mb-2">
-              <p className="text-base leading-7 text-heal-slate-dark">
-                HEAL bridges the gap between credible healthcare knowledge and
-                the communities that need it through education, journalism,
-                documentation, communication, and technology.
-              </p>
-
-              <Link
-                href="/about"
-                className="mt-7 inline-flex items-center text-sm font-bold text-heal-navy transition hover:text-heal-emerald"
-              >
-                Discover HEAL
-                <span className="ml-2 transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/articles"
+            className="group mt-8 inline-flex items-center text-sm font-bold text-heal-navy transition-colors hover:text-heal-emerald"
+          >
+            Explore the Knowledge Hub
+            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
         </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          CONVICTION
-      ───────────────────────────────────────────── */}
-
-      <section className="bg-heal-surface">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div className="grid gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-3">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
-                Our conviction
-              </p>
-            </div>
-
-            <div className="lg:col-span-8 lg:col-start-5">
-              <blockquote className="text-3xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-4xl lg:text-5xl">
-                Healthcare knowledge should reach the people who need it.
-              </blockquote>
-
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-heal-slate-dark">
-                Information should not remain confined to institutions,
-                professionals, or academic literature. HEAL works to move
-                credible knowledge from evidence to communication, from
-                communication to community, and from community to action.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ─────────────────────────────────────────────
           PURPOSE
