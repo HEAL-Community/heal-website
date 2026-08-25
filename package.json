@@ -19,7 +19,6 @@
   "dependencies": {
     "@portabletext/react": "^8.0.0",
     "@sanity/client": "^7.26.2",
-    "@sanity/image-url": "^2.1.1",
-    "lucide-react": "^1.34.0"
+    "@sanity/image-url": "^2.1.1"
   }
 }
