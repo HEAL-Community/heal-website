@@ -1,4 +1,3 @@
-```tsx
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -14,15 +13,13 @@ export const metadata: Metadata = {
     "Healthcare Education and Awareness Lab — advancing health education, journalism, documentation, digital health, and community engagement.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
-```

@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
+  /* HEAL Institutional Palette */
+  --heal-navy: #0b1f3a;
+  --heal-emerald: #008f6b;
+  --heal-gold: #c9a44c;
+
+  /* HEAL Supporting Palette */
+  --heal-teal: #087f8c;
+  --heal-sky: #3b82b6;
+  --heal-light-green: #e8f5f1;
+  --heal-light-blue: #eef6fb;
+
+  /* Neutrals */
+  --heal-slate: #64748b;
+  --heal-slate-dark: #334155;
+  --heal-border: #e2e8f0;
+  --heal-surface: #f8fafc;
+
+  /* Global */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--heal-navy);
 }
 
+/* Tailwind CSS v4 directive; supported by the Tailwind compiler. */
+/* css-languageservice-disable-next-line unknownAtRules */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-heal-navy: var(--heal-navy);
+  --color-heal-emerald: var(--heal-emerald);
+  --color-heal-gold: var(--heal-gold);
+
+  --color-heal-teal: var(--heal-teal);
+  --color-heal-sky: var(--heal-sky);
+  --color-heal-light-green: var(--heal-light-green);
+  --color-heal-light-blue: var(--heal-light-blue);
+
+  --color-heal-slate: var(--heal-slate);
+  --color-heal-slate-dark: var(--heal-slate-dark);
+  --color-heal-border: var(--heal-border);
+  --color-heal-surface: var(--heal-surface);
+
+  --font-sans: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--heal-emerald);
+  color: #ffffff;
+}
+
+a {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--heal-emerald);
+  outline-offset: 3px;
 }
