@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div className="lg:col-span-4">
               <div className="max-w-md border-l-2 border-heal-emerald pl-6 sm:pl-7">
                 <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
-                  The Healthcare Education & Awareness Lab (HEAL) works at the
+                  The Healthcare Education & Awareness Lab works at the
                   intersection of healthcare, communication, education,
                   journalism, documentation, and technology.
                 </p>

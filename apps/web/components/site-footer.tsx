@@ -220,8 +220,7 @@ export default function SiteFooter() {
         {/* Bottom bar */}
         <div className="flex flex-col gap-5 border-t border-white/15 py-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Healthcare Education & Awareness Lab
-            (HEAL). All rights reserved.
+            © {new Date().getFullYear()} Healthcare Education & Awareness Lab. All rights reserved.
           </p>
 
           <div className="flex items-center gap-5">

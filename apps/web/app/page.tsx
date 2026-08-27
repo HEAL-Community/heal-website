@@ -68,7 +68,7 @@ export default async function Home() {
           <div className="grid min-h-[calc(100vh-76px)] items-center gap-16 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:gap-24 lg:py-24">
             <div>
               <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-                Healthcare Education & Awareness Lab (HEAL)
+                Healthcare Education & Awareness Lab
               </p>
 
               <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-heal-navy sm:text-6xl lg:text-7xl xl:text-[84px]">
@@ -402,7 +402,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="max-w-5xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-              Healthcare Education & Awareness Lab (HEAL)
+              Healthcare Education & Awareness Lab
             </p>
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-5xl lg:text-6xl">
