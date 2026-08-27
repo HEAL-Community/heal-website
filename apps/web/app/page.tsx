@@ -71,11 +71,14 @@ export default async function Home() {
           fill
           priority
           sizes="100vw"
-          className="pointer-events-none object-cover object-center"
+          className="pointer-events-none z-0 object-cover object-center"
           aria-hidden="true"
         />
-        <div className="pointer-events-none absolute inset-0 bg-heal-navy/65" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] bg-heal-navy/65"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
             <div>
               <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
