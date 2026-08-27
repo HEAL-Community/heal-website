@@ -39,7 +39,7 @@ export default function InitiativesPage() {
                 Initiatives
               </p>
 
-              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-heal-navy sm:text-6xl lg:text-7xl">
+              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
                 Turning ideas into
                 <br />
                 <span className="text-heal-emerald">meaningful work.</span>
@@ -68,7 +68,7 @@ export default function InitiativesPage() {
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="max-w-4xl text-3xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-4xl">
+              <h2 className="max-w-4xl text-4xl font-extrabold sm:text-5xl leading-[1.02] tracking-[-0.045em] text-heal-navy">
                 From communication to action.
               </h2>
 
@@ -86,11 +86,16 @@ export default function InitiativesPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="border-t border-heal-border">
-            {initiatives.map((initiative) => (
+            {initiatives.map((initiative, index) => (
               <article
                 key={initiative.title}
                 className="grid gap-8 border-b border-heal-border py-12 lg:grid-cols-12 lg:gap-12"
               >
+                <div className="lg:col-span-1">
+                  <p className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                </div>
                 {/* Status */}
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3">

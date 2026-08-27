@@ -57,7 +57,7 @@ export default function WhatWeDoPage() {
           Our work
         </p>
 
-        <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.04em] text-heal-navy sm:text-6xl lg:text-[64px] xl:text-[76px]">
+        <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
           We move healthcare knowledge forward.
         </h1>
       </div>
@@ -81,12 +81,17 @@ export default function WhatWeDoPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="border-t border-heal-border">
-            {areas.map((area) => (
+            {areas.map((area, index) => (
               <article
                 key={area.title}
                 className="grid gap-8 border-b border-heal-border py-14 sm:py-16 lg:grid-cols-12 lg:gap-8 lg:py-20"
               >
-                <div className="lg:col-span-5">
+                <div className="lg:col-span-1">
+                  <p className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                </div>
+                <div className="lg:col-span-4">
                   <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-[-0.025em] text-heal-navy sm:text-4xl">
                     {area.title}
                   </h2>
@@ -114,7 +119,7 @@ export default function WhatWeDoPage() {
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-0.03em] text-heal-navy sm:text-5xl">
+              <h2 className="max-w-4xl text-4xl font-extrabold sm:text-5xl leading-[1.02] tracking-[-0.045em] text-heal-navy">
                 Different disciplines. One purpose.
               </h2>
 

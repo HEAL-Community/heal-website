@@ -1,6 +1,10 @@
-import {sanityClient} from './sanity'
+import {sanityClient, sanityConfigured} from './sanity'
 
 export async function getArticles() {
+  if (!sanityConfigured) {
+    return []
+  }
+
   return sanityClient.fetch(`
     *[_type == "article"] | order(publishedAt desc) {
       _id,
@@ -16,6 +20,10 @@ export async function getArticles() {
 }
 
 export async function getArticle(slug: string) {
+  if (!sanityConfigured) {
+    return null
+  }
+
   return sanityClient.fetch(
     `
       *[_type == "article" && slug.current == $slug][0] {

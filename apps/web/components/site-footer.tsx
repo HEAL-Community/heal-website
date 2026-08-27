@@ -13,21 +13,9 @@ function LinkedInIcon() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       aria-hidden="true"
-      className="h-4 w-4 fill-current"
+      className="size-4 fill-current"
     >
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.999h3.414v1.561h.046c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.287ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM3.555 20.452h3.558V8.999H3.555v11.453ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.454C23.205 24 24 23.226 24 22.271V1.729C24 .774 23.205 0 22.225 0Z" />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-4 w-4 fill-current"
-    >
-      <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z" />
     </svg>
   );
 }
@@ -77,11 +65,6 @@ const socialLinks = [
     icon: LinkedInIcon,
   },
   {
-    label: "Facebook",
-    href: "#",
-    icon: FacebookIcon,
-  },
-  {
     label: "X(Twitter)",
     href: "#",
     icon: XIcon,
@@ -103,29 +86,19 @@ export default function SiteFooter() {
     <footer className="bg-heal-navy text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Main footer */}
-        <div className="grid gap-14 py-20 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr] lg:py-24">
+        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-14">
 
           {/* Brand */}
           <div className="max-w-md">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3"
-              aria-label="HEAL Community home"
-            >
-              <span className="flex h-9 w-9 items-center justify-center border border-white text-sm font-extrabold tracking-tight">
-                H
-              </span>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+              Institution
+            </p>
 
-              <span className="text-xl font-extrabold tracking-[-0.03em]">
-                HEAL
-              </span>
-            </Link>
-
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-heal-gold">
+            <p className="mt-4 max-w-sm text-sm font-semibold leading-6 text-white">
               Healthcare Education & Awareness Lab
             </p>
 
-            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-300">
+            <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">
               Advancing health education, journalism, documentation, digital
               health, and community engagement through purposeful communication.
             </p>
@@ -138,14 +111,14 @@ export default function SiteFooter() {
             </p>
 
             <nav
-              className="mt-5 flex flex-col gap-3"
+              className="mt-4 flex flex-col gap-2"
               aria-label="Footer navigation"
             >
               {exploreLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="w-fit text-sm text-slate-300 transition-colors hover:text-white"
+                  className="w-fit rounded-sm py-1 text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                 >
                   {link.label}
                 </Link>
@@ -156,11 +129,11 @@ export default function SiteFooter() {
           {/* Social */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Follow HEAL
+              Follow
             </p>
 
             <nav
-              className="mt-5 flex flex-col gap-3"
+              className="mt-4 flex flex-col gap-2"
               aria-label="HEAL social media"
             >
               {socialLinks.map((social) => {
@@ -170,8 +143,8 @@ export default function SiteFooter() {
                   <a
                     key={social.label}
                     href={social.href}
-                    aria-label={`Follow HEAL on ${social.label}`}
-                    className="group flex w-fit items-center gap-3 text-sm text-slate-300 transition-colors hover:text-white"
+                    aria-label={`Follow on ${social.label}`}
+                    className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
                     <span>{social.label}</span>
@@ -219,8 +192,7 @@ export default function SiteFooter() {
         {/* Bottom bar */}
         <div className="flex flex-col gap-5 border-t border-white/15 py-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Healthcare Education & Awareness Lab
-            (HEAL). All rights reserved.
+            © {new Date().getFullYear()} Healthcare Education & Awareness Lab. All rights reserved.
           </p>
 
           <div className="flex items-center gap-5">
