@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -23,12 +24,21 @@ export default function SiteHeader() {
           aria-label="HEAL Community home"
           onClick={() => setMenuOpen(false)}
         >
-          <div className="flex h-9 w-9 items-center justify-center border border-heal-navy text-sm font-extrabold tracking-tight text-heal-navy transition group-hover:border-heal-emerald group-hover:text-heal-emerald">
-            H
+          {/* HEAL Symbol */}
+          <div className="relative flex h-11 w-11 shrink-0 items-center justify-center">
+            <Image
+              src="/heal-symbol.png"
+              alt="HEAL"
+              width={44}
+              height={36}
+              priority
+              className="h-auto w-11 object-contain transition-transform duration-300 group-hover:scale-[1.04]"
+            />
           </div>
 
+          {/* Institutional Name */}
           <div className="leading-none">
-            <div className="text-lg font-extrabold tracking-[-0.03em] text-heal-navy">
+            <div className="text-lg font-extrabold tracking-[-0.03em] text-heal-navy transition-colors duration-300 group-hover:text-heal-emerald">
               HEAL
             </div>
 
@@ -65,12 +75,14 @@ export default function SiteHeader() {
           </Link>
         </nav>
 
-        {/* Mobile menu button */}
+        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
           className="flex h-9 w-9 items-center justify-center text-heal-navy transition-colors hover:text-heal-emerald lg:hidden"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
         >
