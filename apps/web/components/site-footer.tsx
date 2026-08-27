@@ -118,7 +118,7 @@ export default function SiteFooter() {
                 alt="HEAL Community"
                 width={240}
                 height={90}
-                className="h-auto w-[180px] object-contain"
+                className="h-auto w-[240px] object-contain"
               />
             </Link>
 
