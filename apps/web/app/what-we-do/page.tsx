@@ -57,7 +57,7 @@ export default function WhatWeDoPage() {
           Our work
         </p>
 
-        <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.04em] text-heal-navy sm:text-6xl lg:text-[64px] xl:text-[76px]">
+        <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-5xl text-[clamp(3.25rem,7vw,6.5rem)] font-extrabold leading-[0.98] tracking-[-0.05em] text-heal-navy">
           We move healthcare knowledge forward.
         </h1>
       </div>
@@ -114,7 +114,7 @@ export default function WhatWeDoPage() {
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-0.03em] text-heal-navy sm:text-5xl">
+              <h2 className="max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold leading-[1.02] tracking-[-0.045em] text-heal-navy">
                 Different disciplines. One purpose.
               </h2>
 
