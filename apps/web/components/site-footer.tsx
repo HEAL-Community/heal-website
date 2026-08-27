@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const exploreLinks = [
@@ -112,13 +113,13 @@ export default function SiteFooter() {
               className="inline-flex items-center gap-3"
               aria-label="HEAL Community home"
             >
-              <span className="flex h-9 w-9 items-center justify-center border border-white text-sm font-extrabold tracking-tight">
-                H
-              </span>
-
-              <span className="text-xl font-extrabold tracking-[-0.03em]">
-                HEAL
-              </span>
+              <Image
+                src="/heal-community-logo.png"
+                alt="HEAL Community"
+                width={240}
+                height={90}
+                className="h-auto w-[180px] object-contain"
+              />
             </Link>
 
             <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-heal-gold">

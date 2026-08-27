@@ -24,28 +24,14 @@ export default function SiteHeader() {
           aria-label="HEAL Community home"
           onClick={() => setMenuOpen(false)}
         >
-          {/* HEAL Symbol */}
-          <div className="relative flex h-11 w-11 shrink-0 items-center justify-center">
-            <Image
-              src="/heal-symbol.png"
-              alt="HEAL"
-              width={44}
-              height={36}
-              priority
-              className="h-auto w-11 object-contain transition-transform duration-300 group-hover:scale-[1.04]"
-            />
-          </div>
-
-          {/* Institutional Name */}
-          <div className="leading-none">
-            <div className="text-lg font-extrabold tracking-[-0.03em] text-heal-navy transition-colors duration-300 group-hover:text-heal-emerald">
-              HEAL
-            </div>
-
-            <div className="mt-1 hidden text-[8px] font-semibold uppercase tracking-[0.14em] text-heal-slate sm:block">
-              Healthcare Education & Awareness Lab
-            </div>
-          </div>
+          <Image
+            src="/heal-community-logo.png"
+            alt="HEAL Community"
+            width={192}
+            height={72}
+            priority
+            className="h-auto w-[150px] object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:w-[180px]"
+          />
         </Link>
 
         {/* Desktop Navigation */}
