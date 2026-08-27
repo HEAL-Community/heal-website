@@ -35,7 +35,7 @@ export default function AboutPage() {
                 The Institution
               </p>
 
-              <h1 className="mt-7 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.04em] text-heal-navy sm:text-6xl lg:text-[64px] xl:text-[76px]">
+              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
                 Healthcare knowledge
                 <br />
                 should reach the people
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div className="lg:col-span-4">
               <div className="max-w-md border-l-2 border-heal-emerald pl-6 sm:pl-7">
                 <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
-                  The Healthcare Education & Awareness Lab (HEAL) works at the
+                  The Healthcare Education & Awareness Lab works at the
                   intersection of healthcare, communication, education,
                   journalism, documentation, and technology.
                 </p>
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-0.03em] text-heal-navy sm:text-5xl">
+              <h2 className="max-w-4xl text-4xl font-extrabold sm:text-5xl leading-[1.02] tracking-[-0.045em] text-heal-navy">
                 There is a gap between knowing and understanding.
               </h2>
 
