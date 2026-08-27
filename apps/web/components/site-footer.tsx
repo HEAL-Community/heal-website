@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const exploreLinks = [
@@ -104,25 +103,11 @@ export default function SiteFooter() {
     <footer className="bg-heal-navy text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Main footer */}
-        <div className="grid gap-14 py-20 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr] lg:py-24">
+        <div className="grid gap-14 py-20 lg:grid-cols-[1.1fr_0.9fr_1fr] lg:py-24">
 
           {/* Brand */}
           <div className="max-w-md">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3"
-              aria-label="HEAL Community home"
-            >
-              <Image
-                src="/heal-logo-negative.png"
-                alt="HEAL Community"
-                width={240}
-                height={90}
-                className="h-auto w-[240px] object-contain"
-              />
-            </Link>
-
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-heal-gold">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-heal-gold">
               Healthcare Education & Awareness Lab
             </p>
 
