@@ -103,15 +103,19 @@ export default function SiteFooter() {
     <footer className="bg-heal-navy text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Main footer */}
-        <div className="grid gap-14 py-20 lg:grid-cols-[1.1fr_0.9fr_1fr] lg:py-24">
+        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-14">
 
           {/* Brand */}
           <div className="max-w-md">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-heal-gold">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+              Institution
+            </p>
+
+            <p className="mt-4 max-w-sm text-sm font-semibold leading-6 text-white">
               Healthcare Education & Awareness Lab
             </p>
 
-            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-300">
+            <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">
               Advancing health education, journalism, documentation, digital
               health, and community engagement through purposeful communication.
             </p>
@@ -124,7 +128,7 @@ export default function SiteFooter() {
             </p>
 
             <nav
-              className="mt-5 flex flex-col gap-3"
+              className="mt-4 flex flex-col gap-2"
               aria-label="Footer navigation"
             >
               {exploreLinks.map((link) => (
@@ -142,11 +146,11 @@ export default function SiteFooter() {
           {/* Social */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Follow HEAL
+              Follow
             </p>
 
             <nav
-              className="mt-5 flex flex-col gap-3"
+              className="mt-4 flex flex-col gap-2"
               aria-label="HEAL social media"
             >
               {socialLinks.map((social) => {
@@ -156,7 +160,7 @@ export default function SiteFooter() {
                   <a
                     key={social.label}
                     href={social.href}
-                    aria-label={`Follow HEAL on ${social.label}`}
+                    aria-label={`Follow on ${social.label}`}
                     className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
