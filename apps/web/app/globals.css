@@ -56,6 +56,48 @@ a {
   color: #ffffff;
 }
 
+@keyframes hero-drift {
+  from { transform: translate3d(0, 0, 0) rotate(0deg); }
+  to { transform: translate3d(-10px, 5px, 0) rotate(1deg); }
+}
+
+@keyframes hero-drift-slow {
+  from { transform: translateY(0); }
+  to { transform: translateY(7px); }
+}
+
+@keyframes hero-pulse {
+  from { opacity: .35; }
+  to { opacity: .82; }
+}
+
+.hero-atmosphere-drift {
+  animation: hero-drift 14s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.hero-atmosphere-drift-slow {
+  animation: hero-drift-slow 18s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+}
+
+.hero-atmosphere-pulse {
+  animation: hero-pulse 8s ease-in-out infinite alternate;
+}
+
+@media (max-width: 639px) {
+  .hero-atmosphere {
+    right: -35%;
+    top: 12%;
+    width: 112%;
+    opacity: .48;
+  }
+
+  .hero-atmosphere-drift-slow {
+    animation-duration: 24s;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -68,5 +110,11 @@ a {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .hero-atmosphere-drift,
+  .hero-atmosphere-drift-slow,
+  .hero-atmosphere-pulse {
+    animation: none;
   }
 }

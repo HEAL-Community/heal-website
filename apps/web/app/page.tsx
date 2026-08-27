@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeHeroAtmosphere } from "../components/home-hero-atmosphere";
 import { getArticles } from "@/lib/queries";
 
 type Article = {
@@ -63,8 +64,9 @@ export default async function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="border-b border-heal-border bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative isolate overflow-hidden border-b border-heal-border bg-white">
+        <HomeHeroAtmosphere />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
             <div>
               <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
