@@ -30,7 +30,15 @@ export default function SiteHeader() {
             width={192}
             height={72}
             priority
-            className="h-auto w-[150px] object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:w-[180px]"
+            className="hidden h-auto w-[150px] object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:w-[180px] lg:block"
+          />
+          <Image
+            src="/heal-symbol.png"
+            alt="HEAL Community"
+            width={64}
+            height={64}
+            priority
+            className="block size-10 object-contain transition-transform duration-300 group-hover:scale-[1.02] lg:hidden"
           />
         </Link>
 
