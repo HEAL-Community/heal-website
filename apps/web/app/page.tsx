@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getArticles } from "@/lib/queries";
 
@@ -63,21 +64,31 @@ export default async function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="border-b border-heal-border bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative isolate overflow-hidden border-b border-heal-border bg-heal-navy">
+        <Image
+          src="/heal-desktop-background.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="pointer-events-none object-cover object-center"
+          aria-hidden="true"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-heal-navy/65" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
             <div>
-              <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+              <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
                 Healthcare Education & Awareness Lab
               </p>
 
-              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-heal-navy sm:text-6xl lg:text-7xl xl:text-[88px]">
+              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[88px]">
                 Better communication
                 <br />
                 <span className="text-heal-emerald">saves lives.</span>
               </h1>
 
-              <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-heal-border pt-5 text-sm font-bold text-heal-navy">
+              <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/35 pt-5 text-sm font-bold text-white">
                 <span>Education</span>
                 <span className="text-heal-emerald">/</span>
                 <span>Journalism</span>
@@ -87,20 +98,20 @@ export default async function Home() {
             </div>
 
             <div className="lg:pb-1">
-              <div className="max-w-md border-l-2 border-heal-emerald pl-7 lg:ml-auto">
-                <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
+              <div className="max-w-md border-l-2 border-heal-gold pl-7 lg:ml-auto">
+                <p className="text-base leading-7 text-white/90 sm:text-lg">
                   HEAL bridges the gap between credible healthcare knowledge
                   and the communities that need it through education,
                   journalism, documentation, communication, and technology.
                 </p>
 
-                <p className="mt-6 text-lg font-medium leading-8 text-heal-navy">
+                <p className="mt-6 text-lg font-medium leading-8 text-white">
                   Building Healthier Communities Through Communication.
                 </p>
 
                 <Link
                   href="/articles"
-                  className="group mt-8 inline-flex items-center border-b-2 border-heal-emerald pb-1 text-sm font-bold text-heal-navy transition-colors hover:text-heal-emerald"
+                  className="group mt-8 inline-flex items-center border-b-2 border-heal-gold pb-1 text-sm font-bold text-white transition-colors hover:text-heal-gold"
                 >
                   Explore the Knowledge Hub
                   <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
