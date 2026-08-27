@@ -39,7 +39,7 @@ export default function InitiativesPage() {
                 Initiatives
               </p>
 
-              <h1 className="mt-7 max-w-5xl text-[clamp(3.25rem,7vw,6.5rem)] font-extrabold leading-[0.98] tracking-[-0.05em] text-heal-navy">
+              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
                 Turning ideas into
                 <br />
                 <span className="text-heal-emerald">meaningful work.</span>
@@ -68,7 +68,7 @@ export default function InitiativesPage() {
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <h2 className="max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold leading-[1.02] tracking-[-0.045em] text-heal-navy">
+              <h2 className="max-w-4xl text-4xl font-extrabold sm:text-5xl leading-[1.02] tracking-[-0.045em] text-heal-navy">
                 From communication to action.
               </h2>
 

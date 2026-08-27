@@ -40,7 +40,7 @@ export default async function KnowledgePage() {
                 Knowledge Hub
               </p>
 
-              <h1 className="mt-7 max-w-5xl text-[clamp(3.25rem,7vw,6.5rem)] font-extrabold leading-[0.98] tracking-[-0.05em] text-heal-navy">
+              <h1 className="mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
                 Knowledge worth
                 <br />
                 <span className="text-heal-emerald">sharing.</span>
@@ -106,7 +106,7 @@ export default async function KnowledgePage() {
                 Latest
               </p>
 
-              <h2 className="mt-5 text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold leading-[1.02] tracking-[-0.045em] text-heal-navy">
+              <h2 className="mt-5 text-4xl font-extrabold sm:text-5xl leading-[1.02] tracking-[-0.045em] text-heal-navy">
                 Recent publications.
               </h2>
             </div>
