@@ -57,7 +57,7 @@ export default function SiteHeader() {
             width={240}
             height={90}
             priority
-            className="h-auto w-[138px] shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.015] sm:w-[165px] lg:w-[188px]"
+            className="h-auto w-[104px] shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.015] sm:w-[124px] lg:w-[141px]"
           />
         </Link>
 
