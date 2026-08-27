@@ -81,17 +81,12 @@ export default function WhatWeDoPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="border-t border-heal-border">
-            {areas.map((area, index) => (
+            {areas.map((area) => (
               <article
                 key={area.title}
                 className="grid gap-8 border-b border-heal-border py-14 sm:py-16 lg:grid-cols-12 lg:gap-8 lg:py-20"
               >
-                <div className="lg:col-span-1">
-                  <p className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                </div>
-                <div className="lg:col-span-4">
+                <div className="lg:col-span-5">
                   <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-[-0.025em] text-heal-navy sm:text-4xl">
                     {area.title}
                   </h2>

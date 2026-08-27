@@ -86,16 +86,11 @@ export default function InitiativesPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="border-t border-heal-border">
-            {initiatives.map((initiative, index) => (
+            {initiatives.map((initiative) => (
               <article
                 key={initiative.title}
                 className="grid gap-8 border-b border-heal-border py-12 lg:grid-cols-12 lg:gap-12"
               >
-                <div className="lg:col-span-1">
-                  <p className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                </div>
                 {/* Status */}
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3">

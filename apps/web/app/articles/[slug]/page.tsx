@@ -10,42 +10,39 @@ type Props = {
 const portableTextComponents = {
   block: {
     h2: ({children}: {children?: React.ReactNode}) => (
-      <h2 className="mt-14 text-3xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-4xl">
+      <h2 style={{fontSize: '2rem', marginTop: '3rem', marginBottom: '1rem'}}>
         {children}
       </h2>
     ),
     h3: ({children}: {children?: React.ReactNode}) => (
-      <h3 className="mt-10 text-2xl font-extrabold leading-tight text-heal-navy">
+      <h3 style={{fontSize: '1.5rem', marginTop: '2rem', marginBottom: '1rem'}}>
         {children}
       </h3>
     ),
     normal: ({children}: {children?: React.ReactNode}) => (
-      <p className="mb-6 text-lg leading-8 text-heal-slate-dark">{children}</p>
+      <p style={{fontSize: '1.08rem', lineHeight: 1.8, marginBottom: '1.5rem'}}>
+        {children}
+      </p>
     ),
     blockquote: ({children}: {children?: React.ReactNode}) => (
-      <blockquote className="my-10 border-l-2 border-heal-emerald pl-6 text-xl italic leading-8 text-heal-navy sm:pl-8">
+      <blockquote
+        style={{
+          borderLeft: '4px solid currentColor',
+          paddingLeft: '1.5rem',
+          margin: '2rem 0',
+          fontStyle: 'italic',
+        }}
+      >
         {children}
       </blockquote>
     ),
   },
   list: {
     bullet: ({children}: {children?: React.ReactNode}) => (
-      <ul className="mb-6 list-disc space-y-2 pl-6 text-lg leading-8 text-heal-slate-dark">{children}</ul>
+      <ul style={{lineHeight: 1.8, marginBottom: '1.5rem'}}>{children}</ul>
     ),
     number: ({children}: {children?: React.ReactNode}) => (
-      <ol className="mb-6 list-decimal space-y-2 pl-6 text-lg leading-8 text-heal-slate-dark">{children}</ol>
-    ),
-  },
-  marks: {
-    link: ({children, value}: {children?: React.ReactNode; value?: {href?: string}}) => (
-      <a
-        href={value?.href}
-        className="font-semibold text-heal-emerald underline decoration-heal-emerald/40 underline-offset-4 transition-colors hover:text-heal-navy"
-        target={value?.href?.startsWith('http') ? '_blank' : undefined}
-        rel={value?.href?.startsWith('http') ? 'noreferrer' : undefined}
-      >
-        {children}
-      </a>
+      <ol style={{lineHeight: 1.8, marginBottom: '1.5rem'}}>{children}</ol>
     ),
   },
 }
@@ -54,46 +51,83 @@ export default async function ArticlePage({params}: Props) {
   const {slug} = await params
   const article = await getArticle(slug)
 
-  if (!article) notFound()
+  if (!article) {
+    notFound()
+  }
 
   const imageUrl = article.featuredImage
-    ? urlFor(article.featuredImage).width(1600).auto('format').url()
+    ? urlFor(article.featuredImage).width(1400).auto('format').url()
     : null
 
   return (
-    <main>
+    <main style={{maxWidth: '900px', margin: '0 auto', padding: '4rem 2rem'}}>
       <article>
-        <header className="border-b border-heal-border bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-            <div className="max-w-4xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-                {article.contentType || 'Publication'}
-              </p>
-              <h1 className="mt-7 text-[clamp(2.75rem,7vw,6rem)] font-extrabold leading-[0.98] tracking-[-0.05em] text-heal-navy">
-                {article.title}
-              </h1>
-              {article.excerpt && (
-                <p className="mt-8 max-w-2xl text-xl leading-8 text-heal-slate-dark sm:text-2xl sm:leading-9">
-                  {article.excerpt}
-                </p>
-              )}
-              {article.publishedAt && (
-                <p className="mt-8 border-t border-heal-border pt-5 text-xs font-bold uppercase tracking-[0.16em] text-heal-slate">
-                  Published {new Date(article.publishedAt).toLocaleDateString('en-NG', {year: 'numeric', month: 'long', day: 'numeric'})}
-                </p>
-              )}
-            </div>
-          </div>
+        <header style={{marginBottom: '3rem'}}>
+          <p
+            style={{
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              fontSize: '0.8rem',
+              fontWeight: 600,
+            }}
+          >
+            {article.contentType}
+          </p>
+
+          <h1
+            style={{
+              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+              lineHeight: 1.05,
+              margin: '1rem 0',
+            }}
+          >
+            {article.title}
+          </h1>
+
+          {article.excerpt && (
+            <p
+              style={{
+                fontSize: '1.3rem',
+                lineHeight: 1.6,
+                opacity: 0.75,
+                maxWidth: '700px',
+              }}
+            >
+              {article.excerpt}
+            </p>
+          )}
+
+          {article.publishedAt && (
+            <p style={{marginTop: '1.5rem', fontSize: '0.9rem', opacity: 0.65}}>
+              {new Date(article.publishedAt).toLocaleDateString('en-NG', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
+          )}
         </header>
 
         {imageUrl && (
-          <figure className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-            <img src={imageUrl} alt={article.title} className="block max-h-[70vh] w-full object-cover" />
+          <figure style={{margin: '0 0 3rem'}}>
+            <img
+              src={imageUrl}
+              alt={article.title}
+              style={{
+                width: '100%',
+                height: 'auto',
+                borderRadius: '12px',
+                display: 'block',
+              }}
+            />
           </figure>
         )}
 
-        <div className="mx-auto max-w-3xl px-6 py-12 lg:py-20">
-          <PortableText value={article.body} components={portableTextComponents} />
+        <div>
+          <PortableText
+            value={article.body}
+            components={portableTextComponents}
+          />
         </div>
       </article>
     </main>
