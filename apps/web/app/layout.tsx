@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description:
     "Healthcare Education and Awareness Lab — advancing health education, journalism, documentation, digital health, and community engagement.",
   icons: {
-    icon: "/heal-favicon.jpg",
-    apple: "/heal-favicon.jpg",
+    icon: "/heal-symbol.png",
+    apple: "/heal-symbol.png",
   },
 };
 
