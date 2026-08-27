@@ -13,10 +13,6 @@ export const metadata: Metadata = {
   title: "HEAL Community",
   description:
     "Healthcare Education and Awareness Lab — advancing health education, journalism, documentation, digital health, and community engagement.",
-  icons: {
-    icon: "/heal-symbol.png",
-    apple: "/heal-symbol.png",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
