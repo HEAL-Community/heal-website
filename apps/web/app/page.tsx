@@ -114,7 +114,8 @@ export default async function Home() {
 
                 <Link
                   href="/articles"
-                  className="group mt-8 inline-flex items-center border-b-2 border-heal-gold pb-1 text-sm font-bold text-white transition-colors hover:text-heal-gold"
+                  className="group mt-8 inline-flex items-center border-b-2 border-heal-gold pb-1 text-sm font-bold transition-colors hover:text-white"
+                  style={{ color: "var(--heal-gold)" }}
                 >
                   Explore the Knowledge Hub
                   <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
