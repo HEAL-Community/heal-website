@@ -79,7 +79,7 @@ export default function SiteHeader() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="flex h-9 w-9 items-center justify-center text-heal-navy transition-colors hover:text-heal-emerald lg:hidden"
+          className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold lg:hidden"
           aria-label={
             menuOpen ? "Close navigation menu" : "Open navigation menu"
           }

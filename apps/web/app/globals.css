@@ -1,62 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  /* HEAL Institutional Colors */
   --heal-navy: #0b1f3a;
   --heal-emerald: #008f6b;
   --heal-gold: #c9a44c;
-
-  /* Supporting Colors */
   --heal-slate-dark: #334155;
   --heal-slate: #64748b;
   --heal-border: #e2e8f0;
   --heal-surface: #f8fafc;
-
-  /* Base */
   --background: #ffffff;
   --foreground: #0b1f3a;
+  --radius-sm: 0.25rem;
+  --shadow-soft: 0 8px 24px rgb(11 31 58 / 0.08);
 }
 
-/* HEAL Design Tokens */
-/* Tailwind CSS v4 directive; ignored by generic CSS linters. */
-/* stylelint-disable-next-line at-rule-no-unknown */
 @theme inline {
   --color-heal-navy: var(--heal-navy);
   --color-heal-emerald: var(--heal-emerald);
   --color-heal-gold: var(--heal-gold);
-
   --color-heal-slate-dark: var(--heal-slate-dark);
   --color-heal-slate: var(--heal-slate);
   --color-heal-border: var(--heal-border);
   --color-heal-surface: var(--heal-surface);
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
   --font-sans: var(--font-manrope);
 }
 
-/* Base Document */
 html {
   scroll-behavior: smooth;
+  background: var(--background);
 }
 
 body {
   margin: 0;
+  min-width: 320px;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
-/* Links */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Selection */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--heal-gold);
+  outline-offset: 3px;
+}
+
 ::selection {
   background: var(--heal-emerald);
   color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

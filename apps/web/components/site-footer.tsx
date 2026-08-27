@@ -145,7 +145,7 @@ export default function SiteFooter() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="w-fit text-sm text-slate-300 transition-colors hover:text-white"
+                  className="w-fit rounded-sm py-1 text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                 >
                   {link.label}
                 </Link>
@@ -171,7 +171,7 @@ export default function SiteFooter() {
                     key={social.label}
                     href={social.href}
                     aria-label={`Follow HEAL on ${social.label}`}
-                    className="group flex w-fit items-center gap-3 text-sm text-slate-300 transition-colors hover:text-white"
+                    className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
                     <span>{social.label}</span>
