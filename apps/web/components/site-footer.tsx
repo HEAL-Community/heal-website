@@ -114,7 +114,7 @@ export default function SiteFooter() {
               aria-label="HEAL Community home"
             >
               <Image
-                src="/heal-community-logo.png"
+                src="/heal-logo-negative.png"
                 alt="HEAL Community"
                 width={240}
                 height={90}

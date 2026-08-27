@@ -25,20 +25,22 @@ export default function SiteHeader() {
           onClick={() => setMenuOpen(false)}
         >
           <Image
-            src="/heal-community-logo.png"
-            alt="HEAL Community"
-            width={192}
-            height={72}
-            priority
-            className="hidden h-auto w-[150px] object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:w-[180px] lg:block"
-          />
-          <Image
             src="/heal-symbol.png"
-            alt="HEAL Community"
+            alt=""
             width={64}
             height={64}
             priority
-            className="block size-10 object-contain transition-transform duration-300 group-hover:scale-[1.02] lg:hidden"
+            aria-hidden="true"
+            className="size-8 shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:size-10"
+          />
+          <Image
+            src="/heal-community-logo.png"
+            alt=""
+            width={192}
+            height={72}
+            priority
+            aria-hidden="true"
+            className="h-auto w-[112px] object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:w-[150px] lg:w-[180px]"
           />
         </Link>
 
