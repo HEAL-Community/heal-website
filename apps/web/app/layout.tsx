@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "../components/site-header";
 import SiteFooter from "../components/site-footer";
@@ -7,6 +7,13 @@ import SiteFooter from "../components/site-footer";
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} h-full bg-background antialiased`}
+      className={`${manrope.variable} ${inter.variable} h-full bg-background antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteHeader />

@@ -1,70 +1,9 @@
-import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
-
-type ContainerProps = HTMLAttributes<HTMLDivElement> & {
-  as?: "div" | "section" | "main" | "header" | "footer";
-  width?: "default" | "narrow" | "wide";
-};
-
-const containerWidths = {
-  default: "max-w-7xl",
-  narrow: "max-w-3xl",
-  wide: "max-w-[90rem]",
-};
-
-export function Container({
-  as: Element = "div",
-  width = "default",
-  className = "",
-  ...props
-}: ContainerProps) {
-  return (
-    <Element
-      className={`mx-auto w-full px-6 sm:px-8 lg:px-10 ${containerWidths[width]} ${className}`}
-      {...props}
-    />
-  );
-}
-
-type SectionHeadingProps = {
-  eyebrow?: string;
-  title: string;
-  description?: string;
-  align?: "left" | "center";
-  children?: ReactNode;
-};
-
-export function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  align = "left",
-  children,
-}: SectionHeadingProps) {
-  const centered = align === "center";
-
-  return (
-    <div className={`flex flex-col gap-4 ${centered ? "items-center text-center" : "items-start"}`}>
-      {eyebrow ? (
-        <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[var(--heal-emerald)]">
-          {eyebrow}
-        </p>
-      ) : null}
-      <h2 className="font-display max-w-3xl text-balance text-3xl font-extrabold tracking-[var(--tracking-tight)] text-[var(--heal-text-primary)] sm:text-4xl">
-        {title}
-      </h2>
-      {description ? (
-        <p className="font-body max-w-2xl text-pretty text-base leading-7 text-[var(--heal-text-secondary)]">
-          {description}
-        </p>
-      ) : null}
-      {children}
-    </div>
-  );
-}
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "secondary" | "ghost" | "gold";
   size?: "small" | "medium" | "large";
+  children: ReactNode;
 };
 
 export function Button({
@@ -72,6 +11,7 @@ export function Button({
   size = "medium",
   className = "",
   type = "button",
+  children,
   ...props
 }: ButtonProps) {
   const variants = {
@@ -135,6 +75,8 @@ export function Button({
         ${className}
       `}
       {...props}
-    />
+    >
+      {children}
+    </button>
   );
 }
