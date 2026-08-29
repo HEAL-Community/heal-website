@@ -4,7 +4,7 @@ import Link from "next/link";
 type HeroProps = {
   variant?: "primary" | "standard" | "featured" | "minimal";
   eyebrow?: string;
-  headline: string;
+  headline: ReactNode;
   supportingText?: string;
   cta?: {
     text: string;
