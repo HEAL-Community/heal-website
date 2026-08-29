@@ -1,14 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getArticles } from "@/lib/queries";
-import { Hero } from "../components/ui/hero";
-import { Card } from "../components/ui/card";
-import { GlassPanel } from "../components/ui/glass-panel";
-import { SectionHeading } from "../components/ui/section-heading";
-import { SectionLayout } from "../components/ui/section-layout";
-import { CTASection } from "../components/ui/cta-section";
-import { ArticleCard } from "../components/ui/article-card";
-import { AmbientBackground } from "../components/ui/ambient-background";
 
 type Article = {
   _id: string;
@@ -71,149 +63,203 @@ export default async function Home() {
 
   return (
     <main>
-      {/* ============================================
-          HERO - Immersive + Cinematic + Editorial
-          ============================================ */}
-      <Hero
-        variant="primary"
-        background="navy"
-        eyebrow="Healthcare Education & Awareness Lab"
-        headline={
-          <>
-            Better communication
-            <br />
-            <span className="text-[var(--heal-emerald)]">saves lives.</span>
-          </>
-        }
-        supportingText="HEAL bridges the gap between credible healthcare knowledge and the communities that need it through education, journalism, documentation, communication, and technology."
-        cta={{
-          text: "Explore the Knowledge Hub",
-          href: "/articles",
-          variant: "gold",
-        }}
-      />
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden border-b border-heal-border bg-heal-navy">
+        <Image
+          src="/heal-desktop-background.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="pointer-events-none z-0 object-cover object-center"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] bg-heal-navy/65"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
+            <div>
+              <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Healthcare Education & Awareness Lab
+              </p>
 
-      {/* ============================================
-          CONVICTION - Editorial + Glassmorphism
-          ============================================ */}
-      <section className="bg-[var(--heal-bg-secondary)] border-b border-[var(--heal-border-subtle)]">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <SectionLayout variant="asymmetric">
-            <div className="lg:col-span-3">
-              <SectionHeading
-                eyebrow="Our conviction"
-                title="Healthcare knowledge should reach the people who need it."
-                align="left"
-              />
-            </div>
-            
-            <div className="lg:col-span-8 lg:col-start-5">
-              <div className="glass-light p-8 rounded-xl border-l-4 border-l-[var(--heal-emerald)]">
-                <p className="font-body text-lg leading-8 text-[var(--heal-text-secondary)]">
-                  Information should not remain confined to institutions,
-                  professionals, or academic literature. HEAL works to move
-                  credible knowledge from evidence to communication, from
-                  communication to community, and from community to action.
-                </p>
+              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[88px]">
+                Better communication
+                <br />
+                <span className="text-heal-emerald">saves lives.</span>
+              </h1>
+
+              <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/35 pt-5 text-sm font-bold text-white">
+                <span>Education</span>
+                <span className="text-heal-emerald">/</span>
+                <span>Journalism</span>
+                <span className="text-heal-emerald">/</span>
+                <span>Digital health</span>
               </div>
             </div>
-          </SectionLayout>
+
+            <div className="lg:pb-1">
+              <div className="max-w-md border-l-2 border-heal-gold pl-7 lg:ml-auto">
+                <p className="text-base leading-7 text-white/90 sm:text-lg">
+                  HEAL bridges the gap between credible healthcare knowledge
+                  and the communities that need it through education,
+                  journalism, documentation, communication, and technology.
+                </p>
+
+                <p className="mt-6 text-lg font-medium leading-8 text-white">
+                  Building Healthier Communities Through Communication.
+                </p>
+
+                <Link
+                  href="/articles"
+                  className="group mt-8 inline-flex items-center border-b-2 border-heal-gold pb-1 text-sm font-bold transition-colors hover:text-white"
+                  style={{ color: "var(--heal-gold)" }}
+                >
+                  Explore the Knowledge Hub
+                  <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ============================================
-          PURPOSE - Card Grid + Hover Effects
-          ============================================ */}
-      <section className="bg-[var(--heal-bg-primary)] border-y border-[var(--heal-border-subtle)]">
+      {/* Our Conviction */}
+      <section className="bg-heal-surface">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-3">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Our conviction
+              </p>
+            </div>
+
+            <div className="lg:col-span-8 lg:col-start-5">
+              <blockquote className="text-3xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-4xl lg:text-5xl">
+                Healthcare knowledge should reach the people who need it.
+              </blockquote>
+
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-heal-slate-dark">
+                Information should not remain confined to institutions,
+                professionals, or academic literature. HEAL works to move
+                credible knowledge from evidence to communication, from
+                communication to community, and from community to action.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Purpose */}
+      <section className="border-y border-heal-border bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
-          <SectionHeading
-            eyebrow="Our Purpose"
-            title="Three pillars of impact"
-            description="Everything we do is grounded in these core principles."
-            align="center"
-          />
-          
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {[
-              {
-                title: "Educate.",
-                description: "Make healthcare knowledge understandable, accessible, and useful.",
-              },
-              {
-                title: "Inform.",
-                description: "Communicate responsibly through journalism, awareness, and public health communication.",
-              },
-              {
-                title: "Innovate.",
-                description: "Use technology and purposeful creativity to expand how healthcare knowledge reaches people.",
-              },
-            ].map((purpose, index) => (
-              <Card key={purpose.title} variant="elevated" className="p-8">
-                <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[var(--heal-gold)] mb-4">
-                  0{index + 1}
-                </p>
-                <h3 className="font-display text-3xl font-extrabold text-[var(--heal-text-primary)]">
-                  {purpose.title}
+          <div className="grid gap-10 md:grid-cols-3 md:divide-x md:divide-heal-border">
+            <div className="md:pr-10">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Purpose
+              </p>
+
+              <h2 className="mt-4 text-3xl font-extrabold text-heal-navy">
+                Educate.
+              </h2>
+
+              <p className="mt-4 leading-7 text-heal-slate-dark">
+                Make healthcare knowledge understandable, accessible, and
+                useful.
+              </p>
+            </div>
+
+            <div className="border-t border-heal-border pt-10 md:border-t-0 md:px-10 md:pt-0">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Purpose
+              </p>
+
+              <h2 className="mt-4 text-3xl font-extrabold text-heal-navy">
+                Inform.
+              </h2>
+
+              <p className="mt-4 leading-7 text-heal-slate-dark">
+                Communicate responsibly through journalism, awareness, and
+                public health communication.
+              </p>
+            </div>
+
+            <div className="border-t border-heal-border pt-10 md:border-t-0 md:pl-10 md:pt-0">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Purpose
+              </p>
+
+              <h2 className="mt-4 text-3xl font-extrabold text-heal-navy">
+                Innovate.
+              </h2>
+
+              <p className="mt-4 leading-7 text-heal-slate-dark">
+                Use technology and purposeful creativity to expand how
+                healthcare knowledge reaches people.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+              What we do
+            </p>
+
+            <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-heal-navy sm:text-5xl">
+              Where healthcare meets communication.
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-heal-slate-dark">
+              HEAL works across disciplines to make healthcare knowledge more
+              accessible, useful, and actionable.
+            </p>
+          </div>
+
+          <div className="mt-16 grid border-t border-heal-border sm:grid-cols-2 lg:grid-cols-4">
+            {areasOfWork.map((area) => (
+              <div
+                key={area.title}
+                className="border-b border-heal-border py-8 sm:px-8 lg:px-6"
+              >
+                <h3 className="text-xl font-extrabold text-heal-navy">
+                  {area.title}
                 </h3>
-                <p className="font-body mt-4 leading-7 text-[var(--heal-text-secondary)]">
-                  {purpose.description}
+
+                <p className="mt-3 text-sm leading-6 text-heal-slate-dark">
+                  {area.description}
                 </p>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ============================================
-          WHAT WE DO - Sophisticated Grid + Glass Cards
-          ============================================ */}
-      <AmbientBackground variant="complex">
-        <section className="bg-[var(--heal-bg-primary)] border-b border-[var(--heal-border-subtle)]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-            <SectionHeading
-              eyebrow="What we do"
-              title="Where healthcare meets communication"
-              description="HEAL works across disciplines to make healthcare knowledge more accessible, useful, and actionable."
-              align="left"
-            />
-
-            <div className="mt-16 grid border-t border-[var(--heal-border-subtle)] sm:grid-cols-2 lg:grid-cols-4">
-              {areasOfWork.map((area) => (
-                <div
-                  key={area.title}
-                  className="border-b border-[var(--heal-border-subtle)] py-8 sm:px-8 lg:px-6 group"
-                >
-                  <h3 className="font-display text-xl font-extrabold text-[var(--heal-text-primary)] transition-colors duration-[var(--duration-fast)] group-hover:text-[var(--heal-emerald)]">
-                    {area.title}
-                  </h3>
-                  <p className="font-body mt-3 text-sm leading-6 text-[var(--heal-text-secondary)]">
-                    {area.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </AmbientBackground>
-
-      {/* ============================================
-          KNOWLEDGE HUB - Featured + Glass Cards
-          ============================================ */}
-      <section className="bg-[var(--heal-bg-secondary)] border-y border-[var(--heal-border-subtle)]">
+      {/* Knowledge Hub */}
+      <section className="border-y border-heal-border bg-heal-surface">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <SectionHeading
-                eyebrow="Knowledge"
-                title="Knowledge worth sharing"
-                description="Evidence, insight, and stories from the intersection of healthcare, communication, technology, and community."
-                align="left"
-              />
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+                Knowledge
+              </p>
+
+              <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-heal-navy sm:text-5xl">
+                Knowledge worth sharing.
+              </h2>
             </div>
 
             <Link
               href="/articles"
-              className="font-body text-sm font-bold text-[var(--heal-text-primary)] transition-colors hover:text-[var(--heal-emerald)]"
+              className="text-sm font-bold text-heal-navy transition hover:text-heal-emerald"
             >
               Explore all publications →
             </Link>
@@ -221,17 +267,56 @@ export default async function Home() {
 
           {leadArticle ? (
             <div className="mt-16 grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
-              <ArticleCard article={leadArticle} variant="featured" className="border-t-2 border-[var(--heal-navy)] pt-7" />
+              <Link
+                href={`/articles/${leadArticle.slug}`}
+                className="group border-t-2 border-heal-navy pt-7"
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+                  {leadArticle.contentType || "Featured"}
+                </p>
+
+                <h3 className="mt-5 max-w-4xl text-3xl font-extrabold leading-tight tracking-tight text-heal-navy transition group-hover:text-heal-emerald sm:text-4xl lg:text-5xl">
+                  {leadArticle.title}
+                </h3>
+
+                {leadArticle.excerpt && (
+                  <p className="mt-6 max-w-2xl text-lg leading-8 text-heal-slate-dark">
+                    {leadArticle.excerpt}
+                  </p>
+                )}
+
+                <p className="mt-8 text-sm font-bold text-heal-navy">
+                  Read publication →
+                </p>
+              </Link>
 
               <div className="space-y-8">
                 {latestArticles.slice(0, 3).map((article) => (
-                  <ArticleCard key={article._id} article={article} variant="elevated" className="border-t border-[var(--heal-border-subtle)] pt-5" />
+                  <Link
+                    key={article._id}
+                    href={`/articles/${article.slug}`}
+                    className="group block border-t border-heal-border pt-5"
+                  >
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-heal-gold">
+                      {article.contentType || "Publication"}
+                    </p>
+
+                    <h3 className="mt-3 text-xl font-extrabold leading-snug text-heal-navy transition group-hover:text-heal-emerald">
+                      {article.title}
+                    </h3>
+
+                    {article.excerpt && (
+                      <p className="mt-2 text-sm leading-6 text-heal-slate">
+                        {article.excerpt}
+                      </p>
+                    )}
+                  </Link>
                 ))}
               </div>
             </div>
           ) : (
-            <div className="mt-16 border-t border-[var(--heal-border-subtle)] pt-7">
-              <p className="font-body text-lg text-[var(--heal-text-secondary)]">
+            <div className="mt-16 border-t border-heal-border pt-7">
+              <p className="text-lg text-heal-slate-dark">
                 Publications from the HEAL Knowledge Hub will appear here.
               </p>
             </div>
@@ -239,108 +324,128 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ============================================
-          APPROACH - Navy + Animated Flow
-          ============================================ */}
-      <section className="bg-[var(--heal-navy)] text-white border-b border-[var(--heal-border-subtle)]">
+      {/* The HEAL Approach */}
+      <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <SectionLayout variant="asymmetric">
+          <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-3">
-              <SectionHeading
-                eyebrow="The HEAL approach"
-                title="From evidence to action"
-                align="left"
-              />
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                The HEAL approach
+              </p>
             </div>
 
             <div className="lg:col-span-8 lg:col-start-5">
-              <p className="font-body mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+              <h2 className="text-4xl font-extrabold tracking-tight text-heal-navy sm:text-5xl">
+                From evidence to action.
+              </h2>
+
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-heal-slate-dark">
                 We believe communication is part of the healthcare
                 infrastructure. Our work connects evidence with people,
                 knowledge with understanding, and understanding with action.
               </p>
 
-              <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 font-display text-lg font-bold sm:text-xl">
-                <span>Evidence</span>
-                <span className="text-[var(--heal-emerald)]">→</span>
-                <span>Communication</span>
-                <span className="text-[var(--heal-emerald)]">→</span>
-                <span>Community</span>
-                <span className="text-[var(--heal-emerald)]">→</span>
-                <span>Action</span>
-              </div>
+              <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-bold tracking-wide text-heal-navy sm:text-base">
+  <span>Evidence</span>
+  <span className="text-heal-emerald">→</span>
+  <span>Communication</span>
+  <span className="text-heal-emerald">→</span>
+  <span>Community</span>
+  <span className="text-heal-emerald">→</span>
+  <span>Action</span>
+</div>
             </div>
-          </SectionLayout>
+          </div>
         </div>
       </section>
 
-      {/* ============================================
-          JOURNEY - Navy + Gold Timeline + Ambient
-          ============================================ */}
-      <AmbientBackground variant="navy">
-        <section className="bg-[var(--heal-navy)] text-white border-b border-[var(--heal-border-subtle)]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-            <SectionLayout variant="asymmetric">
-              <div className="lg:col-span-4">
-                <SectionHeading
-                  eyebrow="Our journey"
-                  title="From Sokoto, forward"
-                  align="left"
-                />
-              </div>
+      {/* Our Journey */}
+      <section className="border-y border-heal-border bg-heal-navy text-white">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                Our journey
+              </p>
 
-              <div className="lg:col-span-7 lg:col-start-6">
-                <div className="grid gap-10 sm:grid-cols-3">
-                  {[
-                    {
-                      year: "2025",
-                      description: "HEAL is founded on the conviction that better communication saves lives.",
-                    },
-                    {
-                      year: "2026",
-                      description: "Sokoto Studio marks the beginning of its operational phase.",
-                    },
-                    {
-                      year: "Beyond",
-                      description: "Building responsibly across Nigeria and, ultimately, Africa.",
-                    },
-                  ].map((milestone) => (
-                    <div key={milestone.year} className="glass-navy-light p-6 rounded-xl border border-[rgba(255,255,255,0.1)]">
-                      <p className="font-display text-4xl font-extrabold text-[var(--heal-gold)]">
-                        {milestone.year}
-                      </p>
-                      <p className="font-body mt-3 text-sm leading-6 text-slate-200">
-                        {milestone.description}
-                      </p>
-                    </div>
-                  ))}
+              <h2 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+                From Sokoto, forward.
+              </h2>
+            </div>
+
+            <div>
+              <div className="grid gap-10 sm:grid-cols-3">
+                <div>
+                  <p className="text-4xl font-extrabold text-heal-gold">
+                    2025
+                  </p>
+
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    HEAL is founded on the conviction that better communication
+                    saves lives.
+                  </p>
                 </div>
 
-                <Link
-                  href="/about"
-                  className="font-body mt-12 inline-block text-sm font-bold text-white transition-colors hover:text-[var(--heal-gold)]"
-                >
-                  Read the HEAL story →
-                </Link>
-              </div>
-            </SectionLayout>
-          </div>
-        </section>
-      </AmbientBackground>
+                <div>
+                  <p className="text-4xl font-extrabold text-heal-gold">
+                    2026
+                  </p>
 
-      {/* ============================================
-          CLOSING - Clean + Editorial + Strong CTA
-          ============================================ */}
-      <CTASection
-        title="Building healthier communities through communication"
-        description="Better health communication requires people and institutions willing to build it together."
-        cta={{
-          text: "Get involved with HEAL",
-          href: "/get-involved",
-          variant: "primary",
-        }}
-        variant="white"
-      />
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    Sokoto Studio marks the beginning of its
+                    operational phase.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-4xl font-extrabold text-heal-gold">
+                    Beyond
+                  </p>
+
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    Building responsibly across Nigeria and, ultimately,
+                    Africa.
+                  </p>
+                </div>
+              </div>
+
+              <Link
+                href="/about"
+                className="mt-12 inline-block text-sm font-bold text-white transition hover:text-heal-gold"
+              >
+                Read the HEAL story →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing Statement */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="max-w-5xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+              Healthcare Education & Awareness Lab
+            </p>
+
+            <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-heal-navy sm:text-5xl lg:text-6xl">
+              Building healthier communities through communication.
+            </h2>
+
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-heal-slate-dark">
+              Better health communication requires people and institutions
+              willing to build it together.
+            </p>
+
+            <Link
+              href="/get-involved"
+              className="mt-9 inline-flex border-b-2 border-heal-emerald pb-1 text-sm font-bold text-heal-navy transition hover:text-heal-emerald"
+            >
+              Get involved with HEAL →
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
