@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Healthcare Education and Awareness Lab (HEAL) transforms credible healthcare knowledge into accessible communication through education, journalism, documentation, digital health, and innovation.",
+    "HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation to build healthier communities.",
 
   applicationName: "HEAL",
 
@@ -54,16 +54,16 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://healcommunity.net",
-    siteName: "Healthcare Education and Awareness Lab (HEAL)",
+    url: "https://healcommunity.net/",
+    siteName: "HEAL — Healthcare Education & Awareness Lab",
     title: "HEAL — Building Healthier Communities Through Communication",
     description:
-      "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation.",
+      "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, and digital health.",
     locale: "en_NG",
 
     images: [
       {
-        url: "/heal-og-image.png",
+        url: "https://healcommunity.net/heal-og-image.png",
         width: 1200,
         height: 630,
         alt: "HEAL — Building Healthier Communities Through Communication",
@@ -75,8 +75,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HEAL — Building Healthier Communities Through Communication",
     description:
-      "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation.",
-    images: ["/heal-og-image.png"],
+      "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, and digital health.",
+    images: ["https://healcommunity.net/heal-og-image.png"],
   },
 
   robots: {
