@@ -14,19 +14,6 @@
   --shadow-soft: 0 8px 24px rgb(11 31 58 / 0.08);
 }
 
-@theme inline {
-  --color-heal-navy: var(--heal-navy);
-  --color-heal-emerald: var(--heal-emerald);
-  --color-heal-gold: var(--heal-gold);
-  --color-heal-slate-dark: var(--heal-slate-dark);
-  --color-heal-slate: var(--heal-slate);
-  --color-heal-border: var(--heal-border);
-  --color-heal-surface: var(--heal-surface);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-manrope);
-}
-
 html {
   scroll-behavior: smooth;
   background: var(--background);
