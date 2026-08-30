@@ -214,7 +214,7 @@ export default function SiteFooter() {
             All rights reserved.
           </p>
 
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link
               href="/privacy"
               className="transition-colors hover:text-white"
@@ -228,6 +228,23 @@ export default function SiteFooter() {
             >
               Terms
             </Link>
+
+            <span className="hidden text-white/20 sm:inline" aria-hidden="true">
+              |
+            </span>
+
+            <span>
+              Built with passion by{" "}
+              <a
+                href="https://www.linkedin.com/in/abdulraheemolurode25"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-slate-300 transition-colors hover:text-heal-gold"
+              >
+                AbdulRaheem Olurode
+              </a>
+              , Founder & Technical Lead
+            </span>
           </div>
         </div>
       </div>
