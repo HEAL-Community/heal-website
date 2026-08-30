@@ -210,26 +210,48 @@ export default function SiteFooter() {
                 href="https://whatsapp.com/channel/0029Vb8RkZqA2pL7Pz93VH0F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm font-semibold text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm font-semibold text-slate-300 transition-all duration-200 hover:translate-x-1 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
                 <span
-                  className="h-2 w-2 rounded-full bg-heal-emerald"
+                  className="relative flex h-2 w-2 shrink-0 items-center justify-center"
                   aria-hidden="true"
-                />
-                WhatsApp Channel
+                >
+                  <span className="absolute h-2 w-2 rounded-full bg-heal-emerald opacity-30 transition-transform duration-300 group-hover:scale-150 motion-safe:animate-pulse" />
+                  <span className="relative h-2 w-2 rounded-full bg-heal-emerald" />
+                </span>
+
+                <span>WhatsApp Channel</span>
+
+                <span
+                  aria-hidden="true"
+                  className="ml-1 inline-block opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100"
+                >
+                  ↗
+                </span>
               </a>
 
               <a
                 href="https://chat.whatsapp.com/H5Jmb1weV5xDoMZImy8kku?s=cl&p=i&mlu=4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm font-semibold text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm font-semibold text-slate-300 transition-all duration-200 hover:translate-x-1 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
                 <span
-                  className="h-2 w-2 rounded-full bg-heal-emerald"
+                  className="relative flex h-2 w-2 shrink-0 items-center justify-center"
                   aria-hidden="true"
-                />
-                WhatsApp Community
+                >
+                  <span className="absolute h-2 w-2 rounded-full bg-heal-emerald opacity-30 transition-transform duration-300 group-hover:scale-150 motion-safe:animate-pulse" />
+                  <span className="relative h-2 w-2 rounded-full bg-heal-emerald" />
+                </span>
+
+                <span>WhatsApp Community</span>
+
+                <span
+                  aria-hidden="true"
+                  className="ml-1 inline-block opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100"
+                >
+                  ↗
+                </span>
               </a>
             </div>
           </div>
