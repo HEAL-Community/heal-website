@@ -91,7 +91,8 @@ export default async function Home() {
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
             <div>
               <p className="mb-8 text-base font-bold uppercase tracking-[0.2em] text-heal-gold sm:text-lg">
-                Healthcare Education & Awareness Lab
+                Healthcare Education & Awareness Lab{" "}
+                <span className="normal-case tracking-normal">(HEAL)</span>
               </p>
 
               <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[88px]">
