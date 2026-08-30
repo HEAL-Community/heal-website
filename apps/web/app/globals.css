@@ -18,28 +18,6 @@
   --shadow-soft: 0 8px 24px rgb(11 31 58 / 0.08);
 }
 
-/*
- * HEAL Dark Mode
- *
- * The .dark class is applied to <html> by the theme toggle.
- * We keep HEAL's core brand colours while adapting surfaces,
- * borders, text, and shadows for comfortable dark-mode viewing.
- */
-html.dark {
-  --heal-navy: #e8eef7;
-  --heal-emerald: #18b889;
-  --heal-gold: #d8b65c;
-  --heal-slate-dark: #e2e8f0;
-  --heal-slate: #94a3b8;
-  --heal-border: #334155;
-  --heal-surface: #172033;
-
-  --background: #0b1220;
-  --foreground: #e8eef7;
-
-  --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.28);
-}
-
 @theme inline {
   --color-heal-navy: var(--heal-navy);
   --color-heal-emerald: var(--heal-emerald);
@@ -61,10 +39,6 @@ html {
   color-scheme: light;
 }
 
-html.dark {
-  color-scheme: dark;
-}
-
 body {
   margin: 0;
   min-width: 320px;
@@ -72,9 +46,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
-  transition:
-    background-color 200ms ease,
-    color 200ms ease;
 }
 
 a {
