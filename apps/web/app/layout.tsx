@@ -60,6 +60,15 @@ export const metadata: Metadata = {
     description:
       "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation.",
     locale: "en_NG",
+
+    images: [
+      {
+        url: "/heal-og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HEAL — Building Healthier Communities Through Communication",
+      },
+    ],
   },
 
   twitter: {
@@ -67,6 +76,7 @@ export const metadata: Metadata = {
     title: "HEAL — Building Healthier Communities Through Communication",
     description:
       "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation.",
+    images: ["/heal-og-image.png"],
   },
 
   robots: {
@@ -83,28 +93,6 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://healcommunity.net/#organization",
-  name: "Healthcare Education and Awareness Lab",
-  alternateName: "HEAL",
-  url: "https://healcommunity.net",
-  description:
-    "Healthcare Education and Awareness Lab (HEAL) transforms credible healthcare knowledge into accessible communication through education, journalism, documentation, digital health, and innovation.",
-  slogan: "Building Healthier Communities Through Communication.",
-  foundingDate: "2025",
-  areaServed: "Nigeria",
-  sameAs: [
-    "https://www.instagram.com/_healcommunity",
-    "https://www.linkedin.com/company/heal-community/",
-    "https://open.substack.com/pub/healcommunity25",
-    "https://www.threads.com/@_healcommunity_",
-    "https://x.com/healcommunity25",
-    "https://youtube.com/@healcommunity25",
-  ],
-};
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -117,13 +105,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
 
         <SiteFooter />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
       </body>
     </html>
   );
