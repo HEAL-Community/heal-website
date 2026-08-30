@@ -95,7 +95,7 @@ export default async function Home() {
                 <span className="normal-case tracking-normal">(HEAL)</span>
               </p>
 
-              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[88px]">
+              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[80px]">
                 Better communication
                 <br />
                 <span className="text-heal-emerald">saves lives.</span>
