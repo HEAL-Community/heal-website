@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+
 import { Manrope } from "next/font/google";
+
 import "./globals.css";
 
 import SiteHeader from "../components/site-header";
@@ -97,48 +99,6 @@ export const metadata: Metadata = {
 
   robots: {
     index: true,
-    follow: true,
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${manrope.variable} antialiased`}>
-        <SiteHeader />
-
-        {children}
-
-        <SiteFooter />
-      </body>
-    </html>
-  );
-}    index: true,
-    follow: true,
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${manrope.variable} antialiased`}>
-        <SiteHeader />
-
-        {children}
-
-        <SiteFooter />
-      </body>
-    </html>
-  );
-}    index: true,
     follow: true,
   },
 };
