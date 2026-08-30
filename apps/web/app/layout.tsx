@@ -117,4 +117,25 @@ export default function RootLayout({
       </body>
     </html>
   );
+}    index: true,
+    follow: true,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${manrope.variable} antialiased`}>
+        <SiteHeader />
+
+        {children}
+
+        <SiteFooter />
+      </body>
+    </html>
+  );
 }
