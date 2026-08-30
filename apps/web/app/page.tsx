@@ -113,8 +113,9 @@ export default async function Home() {
 
             <div className="lg:pb-1">
               <div className="max-w-md border-l-2 border-heal-gold pl-7 lg:ml-auto">
-                <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
-                  Community-as-a-Service
+                <p className="mb-6 text-base font-bold uppercase tracking-[0.2em] text-heal-gold sm:text-lg">
+                  Community-as-a-Service{" "}
+                  <span className="normal-case tracking-normal">(CaaS)</span>
                 </p>
 
                 <p className="text-base leading-7 text-white/90 sm:text-lg">
