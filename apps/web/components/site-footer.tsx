@@ -58,26 +58,15 @@ function ThreadsIcon() {
   );
 }
 
-function YouTubeIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-4 w-4 fill-current"
-    >
-      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.4.58A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.12C4.45 20.5 12 20.5 12 20.5s7.55 0 9.4-.58a3 3 0 0 0 2.1-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.8V8.2l6.4 3.8-6.4 3.8Z" />
-    </svg>
-  );
-}
-
 function SubstackIcon() {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       aria-hidden="true"
       className="h-4 w-4 fill-current"
     >
-      <path d="M3 3h18v2H3V3Zm0 4h18v2H3V7Zm0 4h18v2H3v-2Zm0 4h18v2H3v-2Zm0 4h18v2H3v-2Z" />
+      <path d="M2.5 3.5h19v2h-19v-2Zm0 4h19v2h-19v-2Zm0 4h19v2h-19v-2Zm0 4h19v5l-9.5-4.75L2.5 20.5v-5Z" />
     </svg>
   );
 }
@@ -95,21 +84,13 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/_healcommunity",
+    href: "https://www.instagram.com/_healcommunity_",
     icon: InstagramIcon,
   },
   {
     label: "Threads",
     href: "https://www.threads.com/@_healcommunity_",
     icon: ThreadsIcon,
-  },
-];
-
-const mediaLinks = [
-  {
-    label: "YouTube",
-    href: "https://youtube.com/@healcommunity25",
-    icon: YouTubeIcon,
   },
   {
     label: "Substack",
@@ -122,10 +103,9 @@ export default function SiteFooter() {
   return (
     <footer className="bg-heal-navy text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Main footer */}
-        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8 lg:py-14">
+        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-14">
           {/* Brand */}
-          <div className="max-w-md lg:col-span-2">
+          <div className="max-w-md">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
               Institution
             </p>
@@ -165,7 +145,7 @@ export default function SiteFooter() {
           {/* Social */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Social
+              Follow
             </p>
 
             <nav
@@ -181,7 +161,7 @@ export default function SiteFooter() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Follow HEAL on ${social.label}`}
+                    aria-label={`Follow on ${social.label}`}
                     className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
@@ -192,40 +172,8 @@ export default function SiteFooter() {
             </nav>
           </div>
 
-          {/* Media */}
+          {/* Community */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Media
-            </p>
-
-            <nav
-              className="mt-4 flex flex-col gap-2"
-              aria-label="HEAL media platforms"
-            >
-              {mediaLinks.map((media) => {
-                const Icon = media.icon;
-
-                return (
-                  <a
-                    key={media.label}
-                    href={media.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit HEAL on ${media.label}`}
-                    className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
-                  >
-                    <Icon />
-                    <span>{media.label}</span>
-                  </a>
-                );
-              })}
-            </nav>
-          </div>
-        </div>
-
-        {/* Community */}
-        <div className="border-t border-white/15 py-8">
-          <div className="max-w-md">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
               Community
             </p>
