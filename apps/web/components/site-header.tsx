@@ -13,7 +13,9 @@ const navigation = [
 ];
 
 function isActivePath(pathname: string, href: string) {
-  return href === "/" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
+  return href === "/"
+    ? pathname === href
+    : pathname === href || pathname.startsWith(`${href}/`);
 }
 
 export default function SiteHeader() {
@@ -57,37 +59,51 @@ export default function SiteHeader() {
             width={240}
             height={90}
             priority
-            className="h-auto w-[104px] shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.015] sm:w-[124px] lg:w-[141px]"
+            className="h-auto w-[92px] shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.015] sm:w-[108px] lg:w-[122px]"
           />
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+        <nav
+          className="hidden items-center gap-7 lg:flex"
+          aria-label="Primary navigation"
+        >
           {navigation.map((item) => {
             const active = isActivePath(pathname, item.href);
+
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={`group relative rounded-sm py-3 text-[13px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold ${
-                  active ? "text-heal-navy" : "text-heal-slate-dark hover:text-heal-emerald"
+                  active
+                    ? "text-heal-navy"
+                    : "text-heal-slate-dark hover:text-heal-emerald"
                 }`}
               >
                 {item.label}
+
                 <span
-                  className={`absolute inset-x-0 bottom-1 h-px bg-heal-emerald transition-transform duration-200 origin-left ${
-                    active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  className={`absolute inset-x-0 bottom-1 h-px origin-left bg-heal-emerald transition-transform duration-200 ${
+                    active
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
               </Link>
             );
           })}
 
-          <span className="ml-1 h-5 w-px bg-heal-border" aria-hidden="true" />
+          <span
+            className="ml-1 h-5 w-px bg-heal-border"
+            aria-hidden="true"
+          />
 
           <Link
             href="/get-involved"
-            aria-current={isActivePath(pathname, "/get-involved") ? "page" : undefined}
+            aria-current={
+              isActivePath(pathname, "/get-involved") ? "page" : undefined
+            }
             className="rounded-sm py-3 text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
           >
             Get involved <span aria-hidden="true">→</span>
@@ -103,10 +119,27 @@ export default function SiteHeader() {
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
         >
-          <span className="relative flex h-5 w-5 items-center justify-center" aria-hidden="true">
-            <span className={`absolute h-px w-5 bg-current transition-transform duration-200 ${menuOpen ? "rotate-45" : "-translate-y-[5px]"}`} />
-            <span className={`absolute h-px w-5 bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : "opacity-100"}`} />
-            <span className={`absolute h-px w-5 bg-current transition-transform duration-200 ${menuOpen ? "-rotate-45" : "translate-y-[5px]"}`} />
+          <span
+            className="relative flex h-5 w-5 items-center justify-center"
+            aria-hidden="true"
+          >
+            <span
+              className={`absolute h-px w-5 bg-current transition-transform duration-200 ${
+                menuOpen ? "rotate-45" : "-translate-y-[5px]"
+              }`}
+            />
+
+            <span
+              className={`absolute h-px w-5 bg-current transition-opacity duration-200 ${
+                menuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+
+            <span
+              className={`absolute h-px w-5 bg-current transition-transform duration-200 ${
+                menuOpen ? "-rotate-45" : "translate-y-[5px]"
+              }`}
+            />
           </span>
         </button>
       </div>
@@ -115,13 +148,19 @@ export default function SiteHeader() {
         id="mobile-navigation"
         aria-hidden={!menuOpen}
         className={`border-t border-heal-border bg-background transition-[opacity,visibility] duration-200 lg:hidden ${
-          menuOpen ? "visible opacity-100" : "invisible h-0 overflow-hidden opacity-0"
+          menuOpen
+            ? "visible opacity-100"
+            : "invisible h-0 overflow-hidden opacity-0"
         }`}
       >
-        <nav className="mx-auto max-w-7xl px-5 py-4 sm:px-6" aria-label="Mobile navigation">
+        <nav
+          className="mx-auto max-w-7xl px-5 py-4 sm:px-6"
+          aria-label="Mobile navigation"
+        >
           <div className="flex flex-col">
             {navigation.map((item) => {
               const active = isActivePath(pathname, item.href);
+
               return (
                 <Link
                   key={item.href}
@@ -130,7 +169,9 @@ export default function SiteHeader() {
                   aria-current={active ? "page" : undefined}
                   tabIndex={menuOpen ? 0 : -1}
                   className={`border-b border-heal-border py-4 text-base font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold ${
-                    active ? "text-heal-emerald" : "text-heal-navy hover:text-heal-emerald"
+                    active
+                      ? "text-heal-emerald"
+                      : "text-heal-navy hover:text-heal-emerald"
                   }`}
                 >
                   {item.label}
@@ -152,4 +193,3 @@ export default function SiteHeader() {
     </header>
   );
 }
-
