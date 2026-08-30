@@ -58,26 +58,63 @@ function ThreadsIcon() {
   );
 }
 
+function YouTubeIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-4 w-4 fill-current"
+    >
+      <path d="M23.498 6.186a3.01 3.01 0 0 0-2.117-2.127C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.381.559A3.01 3.01 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.01 3.01 0 0 0 2.117 2.127C4.495 20.5 12 20.5 12 20.5s7.505 0 9.381-.559a3.01 3.01 0 0 0 2.117-2.127C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z" />
+    </svg>
+  );
+}
+
+function SubstackIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-4 w-4 fill-current"
+    >
+      <path d="M22 5.5H2v2h20v-2ZM2 9.5h20V20l-10-5.5L2 20V9.5Z" />
+    </svg>
+  );
+}
+
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/heal-community/",
     icon: LinkedInIcon,
   },
   {
-    label: "X(Twitter)",
-    href: "#",
+    label: "X",
+    href: "https://x.com/healcommunity25",
     icon: XIcon,
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/_healcommunity_/",
     icon: InstagramIcon,
   },
   {
     label: "Threads",
-    href: "#",
+    href: "https://www.threads.com/@_healcommunity_",
     icon: ThreadsIcon,
+  },
+];
+
+const mediaLinks = [
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@healcommunity25",
+    icon: YouTubeIcon,
+  },
+  {
+    label: "Substack",
+    href: "https://open.substack.com/pub/healcommunity25",
+    icon: SubstackIcon,
   },
 ];
 
@@ -87,7 +124,6 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Main footer */}
         <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-14">
-
           {/* Brand */}
           <div className="max-w-md">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
@@ -129,7 +165,7 @@ export default function SiteFooter() {
           {/* Social */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Follow
+              Social
             </p>
 
             <nav
@@ -143,7 +179,9 @@ export default function SiteFooter() {
                   <a
                     key={social.label}
                     href={social.href}
-                    aria-label={`Follow on ${social.label}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`HEAL on ${social.label}`}
                     className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
@@ -154,37 +192,44 @@ export default function SiteFooter() {
             </nav>
           </div>
 
-          {/* Community */}
+          {/* Media */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-              Community
+              Media
             </p>
 
-            <h2 className="mt-5 text-lg font-extrabold">
-              Stay connected with HEAL
-            </h2>
+            <nav
+              className="mt-4 flex flex-col gap-2"
+              aria-label="HEAL media"
+            >
+              {mediaLinks.map((media) => {
+                const Icon = media.icon;
 
-            <p className="mt-3 text-sm leading-6 text-slate-300">
-              Follow our health education, awareness, publications, and
-              community updates on WhatsApp.
-            </p>
+                return (
+                  <a
+                    key={media.label}
+                    href={media.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`HEAL on ${media.label}`}
+                    className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                  >
+                    <Icon />
+                    <span>{media.label}</span>
+                  </a>
+                );
+              })}
+            </nav>
 
-            <div className="mt-6 flex flex-col gap-3">
-              <span className="flex items-center gap-3 text-sm font-semibold text-slate-400">
-                <span
-                  className="h-2 w-2 rounded-full bg-heal-emerald"
-                  aria-hidden="true"
-                />
-                WhatsApp Channel
-              </span>
+            <div className="mt-7 border-t border-white/10 pt-6">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+                Community
+              </p>
 
-              <span className="flex items-center gap-3 text-sm font-semibold text-slate-400">
-                <span
-                  className="h-2 w-2 rounded-full bg-heal-emerald"
-                  aria-hidden="true"
-                />
-                WhatsApp Community
-              </span>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Stay connected with HEAL through our WhatsApp community and
+                channel.
+              </p>
             </div>
           </div>
         </div>
@@ -192,7 +237,8 @@ export default function SiteFooter() {
         {/* Bottom bar */}
         <div className="flex flex-col gap-5 border-t border-white/15 py-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Healthcare Education & Awareness Lab. All rights reserved.
+            © {new Date().getFullYear()} Healthcare Education & Awareness Lab.
+            All rights reserved.
           </p>
 
           <div className="flex items-center gap-5">
