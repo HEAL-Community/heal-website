@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation to build healthier communities.",
+    "HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation.",
 
   applicationName: "HEAL",
 
@@ -58,25 +58,15 @@ export const metadata: Metadata = {
     siteName: "HEAL — Healthcare Education & Awareness Lab",
     title: "HEAL — Building Healthier Communities Through Communication",
     description:
-      "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, and digital health.",
+      "Better communication saves lives. HEAL advances healthcare education, journalism, documentation, and digital health.",
     locale: "en_NG",
-
-    images: [
-      {
-        url: "https://healcommunity.net/heal-og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "HEAL — Building Healthier Communities Through Communication",
-      },
-    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "HEAL — Building Healthier Communities Through Communication",
     description:
-      "Better communication saves lives. HEAL advances healthcare communication through education, journalism, documentation, and digital health.",
-    images: ["https://healcommunity.net/heal-og-image.png"],
+      "Better communication saves lives. HEAL advances healthcare education, journalism, documentation, and digital health.",
   },
 
   robots: {
