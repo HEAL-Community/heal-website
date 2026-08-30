@@ -18,10 +18,102 @@ function isActivePath(pathname: string, href: string) {
     : pathname === href || pathname.startsWith(`${href}/`);
 }
 
+function SunIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+    </svg>
+  );
+}
+
+function MenuIcon({ open }: { open: boolean }) {
+  return (
+    <span
+      className="relative flex h-5 w-5 items-center justify-center"
+      aria-hidden="true"
+    >
+      <span
+        className={`absolute h-px w-5 bg-current transition-transform duration-200 ${
+          open ? "rotate-45" : "-translate-y-[5px]"
+        }`}
+      />
+
+      <span
+        className={`absolute h-px w-5 bg-current transition-opacity duration-200 ${
+          open ? "opacity-0" : "opacity-100"
+        }`}
+      />
+
+      <span
+        className={`absolute h-px w-5 bg-current transition-transform duration-200 ${
+          open ? "-rotate-45" : "translate-y-[5px]"
+        }`}
+      />
+    </span>
+  );
+}
+
 export default function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [themeReady, setThemeReady] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("heal-theme");
+
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setDarkMode(true);
+    } else if (savedTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      setDarkMode(false);
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
+      document.documentElement.classList.toggle("dark", prefersDark);
+      setDarkMode(prefersDark);
+    }
+
+    setThemeReady(true);
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -41,6 +133,14 @@ export default function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  const toggleTheme = () => {
+    const nextTheme = !darkMode;
+
+    setDarkMode(nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme);
+    localStorage.setItem("heal-theme", nextTheme ? "dark" : "light");
+  };
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -77,8 +177,8 @@ export default function SiteHeader() {
                 aria-current={active ? "page" : undefined}
                 className={`group relative rounded-sm py-3 text-[13px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold ${
                   active
-                    ? "text-heal-navy"
-                    : "text-heal-slate-dark hover:text-heal-emerald"
+                    ? "text-heal-navy dark:text-white"
+                    : "text-heal-slate-dark hover:text-heal-emerald dark:text-slate-300 dark:hover:text-heal-emerald"
                 }`}
               >
                 {item.label}
@@ -99,49 +199,54 @@ export default function SiteHeader() {
             aria-hidden="true"
           />
 
+          <button
+            type="button"
+            onClick={toggleTheme}
+            disabled={!themeReady}
+            className="flex h-9 w-9 items-center justify-center rounded-full text-heal-navy transition-colors hover:bg-heal-navy/5 hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-slate-200 dark:hover:bg-white/10"
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {darkMode ? <SunIcon /> : <MoonIcon />}
+          </button>
+
           <Link
             href="/get-involved"
             aria-current={
               isActivePath(pathname, "/get-involved") ? "page" : undefined
             }
-            className="rounded-sm py-3 text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+            className="rounded-sm py-3 text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-white"
           >
             Get involved <span aria-hidden="true">→</span>
           </Link>
         </nav>
 
-        <button
-          ref={menuButtonRef}
-          type="button"
-          onClick={() => setMenuOpen((open) => !open)}
-          className="flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold lg:hidden"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-navigation"
-        >
-          <span
-            className="relative flex h-5 w-5 items-center justify-center"
-            aria-hidden="true"
+        <div className="flex items-center gap-1 lg:hidden">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            disabled={!themeReady}
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-slate-200"
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
-            <span
-              className={`absolute h-px w-5 bg-current transition-transform duration-200 ${
-                menuOpen ? "rotate-45" : "-translate-y-[5px]"
-              }`}
-            />
+            {darkMode ? <SunIcon /> : <MoonIcon />}
+          </button>
 
-            <span
-              className={`absolute h-px w-5 bg-current transition-opacity duration-200 ${
-                menuOpen ? "opacity-0" : "opacity-100"
-              }`}
-            />
-
-            <span
-              className={`absolute h-px w-5 bg-current transition-transform duration-200 ${
-                menuOpen ? "-rotate-45" : "translate-y-[5px]"
-              }`}
-            />
-          </span>
-        </button>
+          <button
+            ref={menuButtonRef}
+            type="button"
+            onClick={() => setMenuOpen((open) => !open)}
+            className="flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-slate-200"
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+          >
+            <MenuIcon open={menuOpen} />
+          </button>
+        </div>
       </div>
 
       <div
@@ -171,7 +276,7 @@ export default function SiteHeader() {
                   className={`border-b border-heal-border py-4 text-base font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold ${
                     active
                       ? "text-heal-emerald"
-                      : "text-heal-navy hover:text-heal-emerald"
+                      : "text-heal-navy hover:text-heal-emerald dark:text-white"
                   }`}
                 >
                   {item.label}
@@ -183,7 +288,7 @@ export default function SiteHeader() {
               href="/get-involved"
               onClick={closeMenu}
               tabIndex={menuOpen ? 0 : -1}
-              className="mt-4 inline-flex w-fit items-center gap-2 rounded-sm py-3 text-sm font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold"
+              className="mt-4 inline-flex w-fit items-center gap-2 rounded-sm py-3 text-sm font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold dark:text-white"
             >
               Get involved <span aria-hidden="true">→</span>
             </Link>
