@@ -131,7 +131,7 @@ export default async function Home() {
                   HEAL bridges the gap between credible healthcare knowledge
                   and the communities that need it through education,
                   journalism, documentation, communication, and technology.
-                  HEAL Community was founded in2025
+                  HEAL Community was founded in 2025
                 </p>
 
                 <blockquote className="mt-6 border-l border-white/30 pl-5 text-lg font-bold leading-8 text-white">
