@@ -40,7 +40,7 @@ function InstagramIcon() {
       aria-hidden="true"
       className="h-4 w-4 fill-current"
     >
-      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 3.25A4.75 4.75 0 1 0 16.75 12 4.76 4.76 0 0 0 12 7.25Zm0 7.5A2.75 2.75 0 1 1 14.75 12 2.75 2.75 0 0 1 12 14.75Zm5.15-8.8a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1Z" />
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 3.25A4.75 4.75 0 1 0 16.75 12 4.76 4.76 0 0 0 12 7.25Zm0 7.5A2.75 2.75 0 1 1 14.75 12 2.75 2.75 0 0 1 12 14.75Zm5.15-8.8a1.1 1.1 0 1 0 1.1 1.1 1.1 0 0 0-1.1-1.1Z" />
     </svg>
   );
 }
@@ -65,7 +65,7 @@ function YouTubeIcon() {
       aria-hidden="true"
       className="h-4 w-4 fill-current"
     >
-      <path d="M23.498 6.186a3.01 3.01 0 0 0-2.117-2.127C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.381.559A3.01 3.01 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.01 3.01 0 0 0 2.117 2.127C4.495 20.5 12 20.5 12 20.5s7.505 0 9.381-.559a3.01 3.01 0 0 0 2.117-2.127C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z" />
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.4.58A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.12C4.45 20.5 12 20.5 12 20.5s7.55 0 9.4-.58a3 3 0 0 0 2.1-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.8V8.2l6.4 3.8-6.4 3.8Z" />
     </svg>
   );
 }
@@ -77,7 +77,7 @@ function SubstackIcon() {
       aria-hidden="true"
       className="h-4 w-4 fill-current"
     >
-      <path d="M22 5.5H2v2h20v-2ZM2 9.5h20V20l-10-5.5L2 20V9.5Z" />
+      <path d="M3 3h18v2H3V3Zm0 4h18v2H3V7Zm0 4h18v2H3v-2Zm0 4h18v2H3v-2Zm0 4h18v2H3v-2Z" />
     </svg>
   );
 }
@@ -89,13 +89,13 @@ const socialLinks = [
     icon: LinkedInIcon,
   },
   {
-    label: "X",
+    label: "X (Twitter)",
     href: "https://x.com/healcommunity25",
     icon: XIcon,
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/_healcommunity_/",
+    href: "https://www.instagram.com/_healcommunity",
     icon: InstagramIcon,
   },
   {
@@ -123,9 +123,9 @@ export default function SiteFooter() {
     <footer className="bg-heal-navy text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Main footer */}
-        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-14">
+        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8 lg:py-14">
           {/* Brand */}
-          <div className="max-w-md">
+          <div className="max-w-md lg:col-span-2">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
               Institution
             </p>
@@ -181,7 +181,7 @@ export default function SiteFooter() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`HEAL on ${social.label}`}
+                    aria-label={`Follow HEAL on ${social.label}`}
                     className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
@@ -200,7 +200,7 @@ export default function SiteFooter() {
 
             <nav
               className="mt-4 flex flex-col gap-2"
-              aria-label="HEAL media"
+              aria-label="HEAL media platforms"
             >
               {mediaLinks.map((media) => {
                 const Icon = media.icon;
@@ -211,7 +211,7 @@ export default function SiteFooter() {
                     href={media.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`HEAL on ${media.label}`}
+                    aria-label={`Visit HEAL on ${media.label}`}
                     className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                   >
                     <Icon />
@@ -220,16 +220,41 @@ export default function SiteFooter() {
                 );
               })}
             </nav>
+          </div>
+        </div>
 
-            <div className="mt-7 border-t border-white/10 pt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
-                Community
-              </p>
+        {/* Community */}
+        <div className="border-t border-white/15 py-8">
+          <div className="max-w-md">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+              Community
+            </p>
 
-              <p className="mt-3 text-sm leading-6 text-slate-300">
-                Stay connected with HEAL through our WhatsApp community and
-                channel.
-              </p>
+            <h2 className="mt-5 text-lg font-extrabold">
+              Stay connected with HEAL
+            </h2>
+
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Follow our health education, awareness, publications, and
+              community updates on WhatsApp.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-3">
+              <span className="flex items-center gap-3 text-sm font-semibold text-slate-400">
+                <span
+                  className="h-2 w-2 rounded-full bg-heal-emerald"
+                  aria-hidden="true"
+                />
+                WhatsApp Channel
+              </span>
+
+              <span className="flex items-center gap-3 text-sm font-semibold text-slate-400">
+                <span
+                  className="h-2 w-2 rounded-full bg-heal-emerald"
+                  aria-hidden="true"
+                />
+                WhatsApp Community
+              </span>
             </div>
           </div>
         </div>
