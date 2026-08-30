@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -12,79 +16,105 @@ export const metadata: Metadata = {
 
   title: {
     default: "HEAL Community",
-    template: "%s | HEAL",
+    template: "%s | HEAL Community",
   },
 
   description:
-    "HEAL advances healthcare communication through education, journalism, documentation, digital health, and innovation.",
+    "Healthcare Education & Awareness Lab — building healthier communities through communication.",
 
-  applicationName: "HEAL",
+  applicationName: "HEAL Community",
 
   authors: [
     {
-      name: "Healthcare Education and Awareness Lab",
+      name: "Healthcare Education & Awareness Lab",
       url: "https://healcommunity.net",
     },
   ],
 
-  creator: "Healthcare Education and Awareness Lab",
-  publisher: "Healthcare Education and Awareness Lab",
+  creator: "Healthcare Education & Awareness Lab",
+  publisher: "Healthcare Education & Awareness Lab",
 
   keywords: [
-    "HEAL",
-    "Healthcare Education and Awareness Lab",
-    "health communication",
+    "HEAL Community",
+    "Healthcare Education & Awareness Lab",
     "health education",
-    "public health",
-    "health journalism",
-    "digital health",
-    "healthcare documentation",
     "health awareness",
-    "health literacy",
-    "community health",
+    "health journalism",
+    "healthcare documentation",
+    "digital health",
+    "public health communication",
+    "community engagement",
     "healthcare innovation",
-    "Nigeria",
   ],
 
   alternates: {
     canonical: "/",
   },
 
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        sizes: "any",
+      },
+      {
+        url: "/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/favicon-16x16.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+    ],
+
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
+
   openGraph: {
     type: "website",
-    url: "https://healcommunity.net/",
-    siteName: "HEAL — Healthcare Education & Awareness Lab",
-    title: "HEAL — Building Healthier Communities Through Communication",
-    description:
-      "Better communication saves lives. HEAL advances healthcare education, journalism, documentation, and digital health.",
     locale: "en_NG",
+    url: "https://healcommunity.net",
+    siteName: "HEAL Community",
+    title: "HEAL Community",
+    description:
+      "Healthcare Education & Awareness Lab — building healthier communities through communication.",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "HEAL — Building Healthier Communities Through Communication",
+    title: "HEAL Community",
     description:
-      "Better communication saves lives. HEAL advances healthcare education, journalism, documentation, and digital health.",
+      "Healthcare Education & Awareness Lab — building healthier communities through communication.",
   },
 
   robots: {
     index: true,
     follow: true,
-
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} antialiased`}>{children}</body>
+      <body className={`${manrope.variable} antialiased`}>
+        <SiteHeader />
+
+        {children}
+
+        <SiteFooter />
+      </body>
     </html>
   );
 }
