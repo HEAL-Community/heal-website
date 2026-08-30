@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   publisher: "Healthcare Education and Awareness Lab",
 
   keywords: [
+    "HEAL",
+    "Healthcare Education and Awareness Lab",
     "health communication",
     "health education",
     "public health",
@@ -42,6 +44,8 @@ export const metadata: Metadata = {
     "health awareness",
     "health literacy",
     "community health",
+    "healthcare innovation",
+    "Nigeria",
   ],
 
   alternates: {
@@ -68,6 +72,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -78,6 +83,28 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://healcommunity.net/#organization",
+  name: "Healthcare Education and Awareness Lab",
+  alternateName: "HEAL",
+  url: "https://healcommunity.net",
+  description:
+    "Healthcare Education and Awareness Lab (HEAL) transforms credible healthcare knowledge into accessible communication through education, journalism, documentation, digital health, and innovation.",
+  slogan: "Building Healthier Communities Through Communication.",
+  foundingDate: "2025",
+  areaServed: "Nigeria",
+  sameAs: [
+    "https://www.instagram.com/_healcommunity",
+    "https://www.linkedin.com/company/heal-community/",
+    "https://open.substack.com/pub/healcommunity25",
+    "https://www.threads.com/@_healcommunity_",
+    "https://x.com/healcommunity25",
+    "https://youtube.com/@healcommunity25",
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -86,8 +113,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <SiteHeader />
+
         <main className="flex-1">{children}</main>
+
         <SiteFooter />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </body>
     </html>
   );
