@@ -90,7 +90,7 @@ export default async function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
             <div>
-              <p className="mb-8 text-base font-bold uppercase tracking-[0.2em] text-heal-gold sm:text-lg">
+              <p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
                 Healthcare Education & Awareness Lab
               </p>
 
@@ -141,3 +141,4 @@ export default async function Home() {
     </main>
   );
 }
+
