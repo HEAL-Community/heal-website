@@ -103,15 +103,15 @@ export default async function Home() {
               </h1>
 
               <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/35 pt-5 text-sm font-bold text-white">
-                <span>Education</span>
+                <span>Health Education</span>
 
                 <span className="text-heal-emerald">/</span>
 
-                <span>Journalism</span>
+                <span>Health Journalism</span>
 
                 <span className="text-heal-emerald">/</span>
 
-                <span>Digital health</span>
+                <span>Digital Health</span>
 
                 <span className="text-heal-emerald">/</span>
 
