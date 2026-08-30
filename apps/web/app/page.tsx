@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getArticles } from "@/lib/queries";
 
@@ -65,19 +64,6 @@ export default async function Home() {
     <main>
       {/* Hero */}
       <section className="relative isolate overflow-hidden border-b border-heal-border bg-heal-navy">
-        <Image
-          src="/heal-desktop-background.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="pointer-events-none z-0 object-cover object-center"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-0 z-[1] bg-heal-navy/65"
-          aria-hidden="true"
-        />
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
             <div>
@@ -346,14 +332,14 @@ export default async function Home() {
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-bold tracking-wide text-heal-navy sm:text-base">
-  <span>Evidence</span>
-  <span className="text-heal-emerald">→</span>
-  <span>Communication</span>
-  <span className="text-heal-emerald">→</span>
-  <span>Community</span>
-  <span className="text-heal-emerald">→</span>
-  <span>Action</span>
-</div>
+                <span>Evidence</span>
+                <span className="text-heal-emerald">→</span>
+                <span>Communication</span>
+                <span className="text-heal-emerald">→</span>
+                <span>Community</span>
+                <span className="text-heal-emerald">→</span>
+                <span>Action</span>
+              </div>
             </div>
           </div>
         </div>
@@ -392,8 +378,7 @@ export default async function Home() {
                   </p>
 
                   <p className="mt-3 text-sm leading-6 text-slate-300">
-                    Sokoto Studio marks the beginning of its
-                    operational phase.
+                    Sokoto Studio marks the beginning of its operational phase.
                   </p>
                 </div>
 
