@@ -95,7 +95,7 @@ export default async function Home() {
                 <span className="normal-case tracking-normal">(HEAL)</span>
               </p>
 
-              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[72px]">
+              <h1 className="max-w-4xl text-4xl font-extrabold leading-[1] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl xl:text-[56px]">
                 Better communication
                 <br />
                 <span className="text-heal-emerald">saves lives.</span>
@@ -125,9 +125,9 @@ export default async function Home() {
                   journalism, documentation, communication, and technology.
                 </p>
 
-                <p className="mt-6 text-lg font-medium leading-8 text-white">
-                  Building Healthier Communities Through Communication.
-                </p>
+                <blockquote className="mt-6 border-l border-white/30 pl-5 text-lg font-medium italic leading-8 text-white">
+                  “Building Healthier Communities Through Communication.”
+                </blockquote>
 
                 <Link
                   href="/articles"
