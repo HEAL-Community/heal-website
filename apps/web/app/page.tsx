@@ -106,11 +106,17 @@ export default async function Home() {
                 <span>Journalism</span>
                 <span className="text-heal-emerald">/</span>
                 <span>Digital health</span>
+                <span className="text-heal-emerald">/</span>
+                <span>Community engagement</span>
               </div>
             </div>
 
             <div className="lg:pb-1">
               <div className="max-w-md border-l-2 border-heal-gold pl-7 lg:ml-auto">
+                <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-heal-gold">
+                  Community-as-a-Service
+                </p>
+
                 <p className="text-base leading-7 text-white/90 sm:text-lg">
                   HEAL bridges the gap between credible healthcare knowledge
                   and the communities that need it through education,
