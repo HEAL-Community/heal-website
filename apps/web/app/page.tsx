@@ -133,7 +133,7 @@ export default async function Home() {
                   journalism, documentation, communication, and technology.
                 </p>
 
-                <blockquote className="mt-6 border-l border-white/30 pl-5 text-lg font-medium italic leading-8 text-white">
+                <blockquote className="mt-6 border-l border-white/30 pl-5 text-lg font-bold leading-8 text-white">
                   “Building Healthier Communities Through Communication.”
                 </blockquote>
 
