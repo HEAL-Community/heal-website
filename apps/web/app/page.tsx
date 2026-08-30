@@ -89,13 +89,14 @@ export default async function Home() {
       <section className="relative isolate overflow-hidden border-b border-heal-border bg-heal-navy">
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 py-20 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-24 lg:py-28">
+            {/* Hero — Left */}
             <div>
               <p className="mb-8 text-base font-bold uppercase tracking-[0.2em] text-heal-gold sm:text-lg">
                 Healthcare Education & Awareness Lab{" "}
                 <span className="normal-case tracking-normal">(HEAL)</span>
               </p>
 
-              <h1 className="max-w-4xl text-4xl font-extrabold leading-[1] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl xl:text-[56px]">
+              <h1 className="max-w-4xl text-4xl font-extrabold leading-[1] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl xl:text-[64px]">
                 Better communication
                 <br />
                 <span className="text-heal-emerald">saves lives.</span>
@@ -103,15 +104,22 @@ export default async function Home() {
 
               <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/35 pt-5 text-sm font-bold text-white">
                 <span>Education</span>
+
                 <span className="text-heal-emerald">/</span>
+
                 <span>Journalism</span>
+
                 <span className="text-heal-emerald">/</span>
+
                 <span>Digital health</span>
+
                 <span className="text-heal-emerald">/</span>
+
                 <span>Community engagement</span>
               </div>
             </div>
 
+            {/* Hero — Right */}
             <div className="lg:pb-1">
               <div className="max-w-md border-l-2 border-heal-gold pl-7 lg:ml-auto">
                 <p className="mb-6 text-base font-bold uppercase tracking-[0.2em] text-heal-gold sm:text-lg">
