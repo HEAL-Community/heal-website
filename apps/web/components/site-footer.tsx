@@ -55,7 +55,11 @@ function SocialIcon({ type }: { type: string }) {
   const common = {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
-    fill: "currentColor",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
     "aria-hidden": true,
     className: "h-[18px] w-[18px] shrink-0",
   };
@@ -63,7 +67,12 @@ function SocialIcon({ type }: { type: string }) {
   switch (type) {
     case "linkedin":
       return (
-        <svg {...common}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[18px] w-[18px] shrink-0 fill-current"
+        >
           <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.56V9H3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z" />
         </svg>
       );
@@ -78,27 +87,50 @@ function SocialIcon({ type }: { type: string }) {
     case "instagram":
       return (
         <svg {...common}>
-          <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-3 0Z" />
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
         </svg>
       );
 
     case "threads":
       return (
-        <svg {...common}>
-          <path d="M12.186 2C6.36 2 2.5 5.64 2.5 11.73c0 6.42 3.7 10.27 9.72 10.27 5.7 0 9.28-3.05 9.28-7.77 0-4.12-2.62-6.54-6.77-6.54h-.24c-.38-1.72-1.63-2.93-3.94-2.93-2.47 0-4.15 1.37-4.15 3.37 0 1.73 1.27 2.85 3.38 3.15l.38-1.76c-1.14-.17-1.7-.63-1.7-1.38 0-.91.82-1.52 2.04-1.52 1.48 0 2.26.72 2.49 2.27-4.54.1-7.05 1.7-7.05 4.61 0 2.55 2.06 4.35 4.98 4.35 2.57 0 4.42-1.13 5.05-3.17 1.22.49 1.8 1.34 1.8 2.59 0 2.61-2.16 4.16-5.55 4.16-4.68 0-7.57-2.93-7.57-8.68 0-5.29 2.99-8.25 7.53-8.25 3.57 0 5.91 1.58 6.91 4.65l1.83-.65C18.11 3.88 15.77 2 12.186 2Zm-.26 11.57c1.48 0 2.56.65 2.56 1.72 0 1.11-1.01 1.8-2.65 1.8-1.69 0-2.78-.77-2.78-1.94 0-1.04.92-1.58 2.87-1.58Z" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[18px] w-[18px] shrink-0"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M19.7 10.6c-.2-4.8-3-7.6-7.7-7.6-4.8 0-7.8 3-7.8 8.4 0 5.5 2.9 8.6 8 8.6 4.4 0 7.3-2.2 7.3-5.8 0-3.1-2-4.9-5.1-4.9-2.7 0-4.6 1.1-4.6 3.1 0 1.6 1.3 2.7 3.2 2.7 2 0 3.3-.9 3.3-2.4 0-1.6-1.5-2.7-4.1-2.7" />
+          <path d="M14.3 12.7c2.7.2 4.4 1.5 4.4 3.7" />
         </svg>
       );
 
     case "substack":
       return (
-        <svg {...common}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[18px] w-[18px] shrink-0 fill-current"
+        >
           <path d="M3 3h18v2H3V3Zm0 4h18v2H3V7Zm0 4h18v2H3v-2Zm0 4h18v6l-9-5-9 5v-6Z" />
         </svg>
       );
 
     case "youtube":
       return (
-        <svg {...common}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[18px] w-[18px] shrink-0 fill-current"
+        >
           <path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.39.58A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.87.58 9.39.58 9.39.58s7.52 0 9.39-.58a3 3 0 0 0 2.11-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.75 15.5v-7l6 3.5-6 3.5Z" />
         </svg>
       );
@@ -131,7 +163,7 @@ export default function SiteFooter() {
 
             <p
               className="mt-4 max-w-sm text-sm font-bold leading-7"
-              style={{ color: "#008f6b" }}
+              style={{ color: "rgba(255,255,255,0.85)" }}
             >
               Healthcare Education &amp; Awareness Lab
             </p>
@@ -193,13 +225,7 @@ export default function SiteFooter() {
                   className="group flex w-fit items-center gap-3 text-sm transition-colors hover:text-white"
                   style={{ color: "rgba(255,255,255,0.70)" }}
                 >
-                  <span
-                    className="transition-colors group-hover:text-heal-gold"
-                    style={{ color: "#c9a44c" }}
-                  >
-                    <SocialIcon type={link.icon} />
-                  </span>
-
+                  <SocialIcon type={link.icon} />
                   <span>{link.label}</span>
                 </a>
               ))}
