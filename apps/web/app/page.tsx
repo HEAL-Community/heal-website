@@ -3,14 +3,14 @@ import Link from "next/link";
 import { getArticles } from "@/lib/queries";
 
 export const metadata: Metadata = {
-  title: "HEAL Community",
+  title: "Healthcare Education, Awareness & Communication",
   description:
     "HEAL advances health education, journalism, healthcare documentation, digital health, research communication, and community engagement through purposeful communication.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "HEAL Community",
+    title: "Healthcare Education, Awareness & Communication",
     description:
       "HEAL advances health education, journalism, healthcare documentation, digital health, research communication, and community engagement through purposeful communication.",
     url: "/",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "HEAL Community",
+    title: "Healthcare Education, Awareness & Communication",
     description:
       "HEAL advances health education, journalism, healthcare documentation, digital health, research communication, and community engagement through purposeful communication.",
   },
@@ -103,19 +103,19 @@ export default async function Home() {
               </h1>
 
               <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/35 pt-5 text-sm font-bold text-white">
-                <span>Education</span>
+                <span>Health Education</span>
 
                 <span className="text-heal-emerald">/</span>
 
-                <span>Journalism</span>
+                <span>Health Journalism</span>
 
                 <span className="text-heal-emerald">/</span>
 
-                <span>Digital health</span>
+                <span>Digital Health</span>
 
                 <span className="text-heal-emerald">/</span>
 
-                <span>Community engagement</span>
+                <span>Community Engagement</span>
               </div>
             </div>
 
@@ -131,6 +131,7 @@ export default async function Home() {
                   HEAL bridges the gap between credible healthcare knowledge
                   and the communities that need it through education,
                   journalism, documentation, communication, and technology.
+                  HEAL Community was founded in 2025 towards:
                 </p>
 
                 <blockquote className="mt-6 border-l border-white/30 pl-5 text-lg font-bold leading-8 text-white">
