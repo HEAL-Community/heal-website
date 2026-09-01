@@ -55,11 +55,6 @@ function SocialIcon({ type }: { type: string }) {
   const common = {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 1.8,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
     "aria-hidden": true,
     className: "h-[18px] w-[18px] shrink-0",
   };
@@ -68,10 +63,8 @@ function SocialIcon({ type }: { type: string }) {
     case "linkedin":
       return (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="h-[18px] w-[18px] shrink-0 fill-current"
+          {...common}
+          fill="currentColor"
         >
           <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.56V9H3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z" />
         </svg>
@@ -79,45 +72,54 @@ function SocialIcon({ type }: { type: string }) {
 
     case "x":
       return (
-        <svg {...common}>
+        <svg
+          {...common}
+          fill="currentColor"
+        >
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.964 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
         </svg>
       );
 
     case "instagram":
       return (
-        <svg {...common}>
+        <svg
+          {...common}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        >
           <rect x="3" y="3" width="18" height="18" rx="5" />
           <circle cx="12" cy="12" r="4" />
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          <circle
+            cx="17.5"
+            cy="6.5"
+            r="1"
+            fill="currentColor"
+            stroke="none"
+          />
         </svg>
       );
 
     case "threads":
       return (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="h-[18px] w-[18px] shrink-0"
+          {...common}
           fill="none"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M19.7 10.6c-.2-4.8-3-7.6-7.7-7.6-4.8 0-7.8 3-7.8 8.4 0 5.5 2.9 8.6 8 8.6 4.4 0 7.3-2.2 7.3-5.8 0-3.1-2-4.9-5.1-4.9-2.7 0-4.6 1.1-4.6 3.1 0 1.6 1.3 2.7 3.2 2.7 2 0 3.3-.9 3.3-2.4 0-1.6-1.5-2.7-4.1-2.7" />
-          <path d="M14.3 12.7c2.7.2 4.4 1.5 4.4 3.7" />
+          <path d="M18.91 11.06c-.24-4.62-2.84-7.27-7.09-7.27-4.47 0-7.31 2.84-7.31 8.21 0 5.38 2.73 8.25 7.48 8.25 4.25 0 7.08-2.04 7.08-5.49 0-2.86-1.86-4.65-4.8-4.65-2.62 0-4.38 1.08-4.38 2.94 0 1.48 1.19 2.52 2.96 2.52 1.82 0 3.03-.84 3.03-2.26 0-1.46-1.35-2.47-3.78-2.47" />
+          <path d="M14.88 12.72c2.57.28 4.19 1.55 4.19 3.75" />
         </svg>
       );
 
     case "substack":
       return (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="h-[18px] w-[18px] shrink-0 fill-current"
+          {...common}
+          fill="currentColor"
         >
           <path d="M3 3h18v2H3V3Zm0 4h18v2H3V7Zm0 4h18v2H3v-2Zm0 4h18v6l-9-5-9 5v-6Z" />
         </svg>
@@ -126,10 +128,8 @@ function SocialIcon({ type }: { type: string }) {
     case "youtube":
       return (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="h-[18px] w-[18px] shrink-0 fill-current"
+          {...common}
+          fill="currentColor"
         >
           <path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.39.58A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.87.58 9.39.58 9.39.58s7.52 0 9.39-.58a3 3 0 0 0 2.11-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.75 15.5v-7l6 3.5-6 3.5Z" />
         </svg>
@@ -162,7 +162,7 @@ export default function SiteFooter() {
             </h2>
 
             <p
-              className="mt-4 max-w-sm text-sm font-bold leading-7"
+              className="mt-4 max-w-sm text-sm leading-7"
               style={{ color: "rgba(255,255,255,0.85)" }}
             >
               Healthcare Education &amp; Awareness Lab
