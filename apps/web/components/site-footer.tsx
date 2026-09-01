@@ -92,7 +92,7 @@ const socialLinks = [
   },
   {
     label: "X (Twitter)",
-    href: "https://x.com/healcommunity25",
+    href: "https://x.com/_healcommunity_",
     icon: XIcon,
   },
   {
@@ -271,7 +271,7 @@ export default function SiteFooter() {
                 href="https://www.linkedin.com/in/abdulraheemolurode25"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="font-bold text-heal-gold transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
                 AbdulRaheem Olurode
               </a>
