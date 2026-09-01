@@ -54,7 +54,7 @@ function ThreadsIcon() {
       aria-hidden="true"
       className="h-4 w-4 shrink-0 fill-current"
     >
-      <path d="M12.18 2C6.35 2 2.5 5.76 2.5 11.98c0 6.28 3.75 10.02 9.72 10.02 5.44 0 9.28-2.76 9.28-7.43 0-3.71-2.22-5.94-6.04-6.4-.45-2.56-2.13-4.01-4.87-4.01-2.62 0-4.43 1.44-4.43 3.53 0 1.64 1.19 2.81 3.06 3.18l.4-1.87c-.96-.2-1.49-.65-1.49-1.31 0-.95.92-1.61 2.46-1.61 1.75 0 2.69.78 2.94 2.36-4.37.12-6.79 1.65-6.79 4.4 0 2.46 1.95 4.16 4.78 4.16 2.38 0 4.02-1.03 4.67-2.88 1.12.45 1.67 1.22 1.67 2.34 0 2.3-2.16 3.72-5.59 3.72-4.72 0-7.59-2.86-7.59-8.2 0-5.2 2.94-8.1 7.6-8.1 3.54 0 5.82 1.5 6.88 4.43l1.87-.68C17.71 3.9 15.49 2 12.18 2Zm-.25 11.43c1.47 0 2.55.62 2.55 1.67 0 1.08-.96 1.75-2.54 1.75-1.62 0-2.67-.72-2.67-1.87 0-1.03.87-1.55 2.66-1.55Z" />
+      <path d="M12.186 2C6.36 2 2.5 5.64 2.5 11.73c0 6.42 3.7 10.27 9.72 10.27 5.7 0 9.28-3.05 9.28-7.77 0-4.12-2.62-6.54-6.77-6.54h-.24c-.38-1.72-1.63-2.93-3.94-2.93-2.47 0-4.15 1.37-4.15 3.37 0 1.73 1.27 2.85 3.38 3.15l.38-1.76c-1.14-.17-1.7-.63-1.7-1.38 0-.91.82-1.52 2.04-1.52 1.48 0 2.26.72 2.49 2.27-4.54.1-7.05 1.7-7.05 4.61 0 2.55 2.06 4.35 4.98 4.35 2.57 0 4.42-1.13 5.05-3.17 1.22.49 1.8 1.34 1.8 2.59 0 2.61-2.16 4.16-5.55 4.16-4.68 0-7.57-2.93-7.57-8.68 0-5.29 2.99-8.25 7.53-8.25 3.57 0 5.91 1.58 6.91 4.65l1.83-.65C18.11 3.88 15.77 2 12.186 2Zm-.26 11.57c1.48 0 2.56.65 2.56 1.72 0 1.11-1.01 1.8-2.65 1.8-1.69 0-2.78-.77-2.78-1.94 0-1.04.92-1.58 2.87-1.58Z" />
     </svg>
   );
 }
@@ -120,28 +120,26 @@ const socialLinks = [
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-heal-border bg-white">
+    <footer className="border-t border-white/10 bg-heal-navy">
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Institution */}
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Institution
             </h2>
 
-            <p className="mt-4 max-w-sm text-sm leading-7 text-heal-slate">
+            <p className="mt-4 max-w-sm text-sm leading-7 text-white/70">
               Healthcare Education &amp; Awareness Lab
             </p>
 
-            <p className="mt-3 max-w-sm text-sm leading-7 text-heal-slate">
+            <p className="mt-3 max-w-sm text-sm leading-7 text-white/70">
               Advancing health education, journalism, documentation, digital
               health, and community engagement through purposeful communication.
             </p>
           </div>
 
-          {/* Explore */}
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Explore
             </h2>
 
@@ -153,7 +151,7 @@ export default function SiteFooter() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="w-fit text-sm text-heal-slate transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                  className="w-fit text-sm text-white/70 transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                 >
                   {link.label}
                 </Link>
@@ -161,9 +159,8 @@ export default function SiteFooter() {
             </nav>
           </div>
 
-          {/* Follow */}
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Follow
             </h2>
 
@@ -177,7 +174,7 @@ export default function SiteFooter() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-fit items-center gap-3 text-sm text-heal-slate transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                  className="flex w-fit items-center gap-3 text-sm text-white/70 transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                 >
                   <Icon />
                   <span>{label}</span>
@@ -186,17 +183,16 @@ export default function SiteFooter() {
             </nav>
           </div>
 
-          {/* Community */}
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Community
             </h2>
 
-            <h3 className="mt-4 text-base font-semibold text-heal-navy">
+            <h3 className="mt-4 text-base font-semibold text-white">
               Stay connected with HEAL
             </h3>
 
-            <p className="mt-3 text-sm leading-7 text-heal-slate">
+            <p className="mt-3 text-sm leading-7 text-white/70">
               Follow our health education, awareness, publications, and
               community updates on WhatsApp.
             </p>
@@ -206,7 +202,7 @@ export default function SiteFooter() {
                 href="https://whatsapp.com/channel/0029Vb8RkZqA2pL7Pz93VH0F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-heal-navy focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
                 WhatsApp Channel ↗
               </a>
@@ -215,7 +211,7 @@ export default function SiteFooter() {
                 href="https://chat.whatsapp.com/H5Jmb1weV5xDoMZImy8kku?s=cl&p=i&mlu=4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-heal-navy focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
                 WhatsApp Community ↗
               </a>
@@ -223,8 +219,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-heal-border pt-6 text-sm text-heal-slate sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 Healthcare Education &amp; Awareness Lab. All rights
             reserved.
@@ -247,7 +242,7 @@ export default function SiteFooter() {
               </a>
             </span>
 
-            <span className="hidden text-heal-border sm:inline">•</span>
+            <span className="hidden text-white/20 sm:inline">•</span>
 
             <div className="flex gap-4">
               <Link
