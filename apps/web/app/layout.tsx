@@ -6,6 +6,7 @@ import "./globals.css";
 
 import SiteHeader from "../components/site-header";
 import SiteFooter from "../components/site-footer";
+import StructuredData from "./structured-data";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -118,6 +119,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} antialiased`}>
+        <StructuredData />
+
         <SiteHeader />
 
         {children}
