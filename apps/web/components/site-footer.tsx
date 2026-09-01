@@ -98,7 +98,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/_healcommunity_",
+    href: "https://www.instagram.com/_healcommunity_/",
     icon: InstagramIcon,
   },
   {
@@ -108,7 +108,7 @@ const socialLinks = [
   },
   {
     label: "Substack",
-    href: "https://open.substack.com/pub/healcommunity25",
+    href: "https://healcommunity25.substack.com/",
     icon: SubstackIcon,
   },
   {
@@ -118,11 +118,23 @@ const socialLinks = [
   },
 ];
 
+const whatsappLinks = [
+  {
+    label: "WhatsApp Channel",
+    href: "https://www.whatsapp.com/channel/0029Vb8RkZqA2pL7Pz93VH0F",
+  },
+  {
+    label: "WhatsApp Community",
+    href: "https://chat.whatsapp.com/H5Jmb1weV5xDoMZImy8kku?mlu=4&p=i&s=cl",
+  },
+];
+
 export default function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-heal-navy">
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          {/* Institution */}
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Institution
@@ -138,6 +150,7 @@ export default function SiteFooter() {
             </p>
           </div>
 
+          {/* Explore */}
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Explore
@@ -159,6 +172,7 @@ export default function SiteFooter() {
             </nav>
           </div>
 
+          {/* Follow */}
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Follow
@@ -183,6 +197,7 @@ export default function SiteFooter() {
             </nav>
           </div>
 
+          {/* Community */}
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Community
@@ -198,27 +213,22 @@ export default function SiteFooter() {
             </p>
 
             <div className="mt-5 flex flex-col gap-3">
-              <a
-                href="https://whatsapp.com/channel/0029Vb8RkZqA2pL7Pz93VH0F"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
-              >
-                WhatsApp Channel ↗
-              </a>
-
-              <a
-                href="https://chat.whatsapp.com/H5Jmb1weV5xDoMZImy8kku?s=cl&p=i&mlu=4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
-              >
-                WhatsApp Community ↗
-              </a>
+              {whatsappLinks.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                >
+                  {label} ↗
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 Healthcare Education &amp; Awareness Lab. All rights
