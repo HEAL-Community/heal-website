@@ -271,7 +271,7 @@ export default function SiteFooter() {
                 href="https://www.linkedin.com/in/abdulraheemolurode25"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-heal-gold transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="font-bold text-[#c9a44c] transition-colors hover:text-[#008f6b] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c9a44c]"
               >
                 AbdulRaheem Olurode
               </a>
