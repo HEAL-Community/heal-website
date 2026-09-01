@@ -22,9 +22,11 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Healthcare Education & Awareness Lab — building healthier communities through communication.",
+    "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
 
   applicationName: "HEAL Community",
+
+  category: "healthcare",
 
   authors: [
     {
@@ -38,15 +40,20 @@ export const metadata: Metadata = {
 
   keywords: [
     "HEAL Community",
+    "HEAL Community Nigeria",
+    "HEAL Nigeria",
     "Healthcare Education & Awareness Lab",
-    "health education",
-    "health awareness",
-    "health journalism",
+    "healthcare education",
+    "health education Nigeria",
+    "health awareness Nigeria",
+    "health journalism Nigeria",
     "healthcare documentation",
-    "digital health",
+    "digital health Nigeria",
     "public health communication",
-    "community engagement",
+    "community health education",
+    "health communication",
     "healthcare innovation",
+    "community engagement",
   ],
 
   alternates: {
@@ -87,14 +94,14 @@ export const metadata: Metadata = {
     siteName: "HEAL Community",
     title: "HEAL Community",
     description:
-      "Healthcare Education & Awareness Lab — building healthier communities through communication.",
+      "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
   },
 
   twitter: {
     card: "summary_large_image",
     title: "HEAL Community",
     description:
-      "Healthcare Education & Awareness Lab — building healthier communities through communication.",
+      "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
   },
 
   robots: {
