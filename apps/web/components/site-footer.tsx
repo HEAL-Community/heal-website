@@ -23,11 +23,12 @@ function LinkedInIcon() {
 function XIcon() {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       aria-hidden="true"
       className="h-4 w-4 shrink-0 fill-current"
     >
-      <path d="M18.9 2h3.68l-8.04 9.19L24 22h-7.41l-5.8-7.58L4.15 22H.46l8.6-9.83L0 2h7.6l5.24 6.93L18.9 2Zm-1.3 17.52h2.04L6.47 4.38H4.28L17.6 19.52Z" />
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.964 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
     </svg>
   );
 }
@@ -40,7 +41,7 @@ function InstagramIcon() {
       aria-hidden="true"
       className="h-4 w-4 shrink-0 fill-current"
     >
-      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 3.25A4.75 4.75 0 1 0 16.75 12 4.76 4.76 0 0 0 12 7.25Zm0 7.5A2.75 2.75 0 1 1 14.75 12 2.75 2.75 0 0 1 12 14.75Zm5.15-8.8a1.1 1.1 0 1 0 1.1 1.1 1.1 0 0 0-1.1-1.1Z" />
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
     </svg>
   );
 }
@@ -49,11 +50,11 @@ function ThreadsIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 192 192"
+      viewBox="0 0 24 24"
       aria-hidden="true"
       className="h-4 w-4 shrink-0 fill-current"
     >
-      <path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8819 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z" />
+      <path d="M12.18 2C6.35 2 2.5 5.76 2.5 11.98c0 6.28 3.75 10.02 9.72 10.02 5.44 0 9.28-2.76 9.28-7.43 0-3.71-2.22-5.94-6.04-6.4-.45-2.56-2.13-4.01-4.87-4.01-2.62 0-4.43 1.44-4.43 3.53 0 1.64 1.19 2.81 3.06 3.18l.4-1.87c-.96-.2-1.49-.65-1.49-1.31 0-.95.92-1.61 2.46-1.61 1.75 0 2.69.78 2.94 2.36-4.37.12-6.79 1.65-6.79 4.4 0 2.46 1.95 4.16 4.78 4.16 2.38 0 4.02-1.03 4.67-2.88 1.12.45 1.67 1.22 1.67 2.34 0 2.3-2.16 3.72-5.59 3.72-4.72 0-7.59-2.86-7.59-8.2 0-5.2 2.94-8.1 7.6-8.1 3.54 0 5.82 1.5 6.88 4.43l1.87-.68C17.71 3.9 15.49 2 12.18 2Zm-.25 11.43c1.47 0 2.55.62 2.55 1.67 0 1.08-.96 1.75-2.54 1.75-1.62 0-2.67-.72-2.67-1.87 0-1.03.87-1.55 2.66-1.55Z" />
     </svg>
   );
 }
@@ -66,7 +67,7 @@ function SubstackIcon() {
       aria-hidden="true"
       className="h-4 w-4 shrink-0 fill-current"
     >
-      <path d="M2.5 3.5h19v2h-19v-2Zm0 4h19v2h-19v-2Zm0 4h19v2h-19v-2Zm0 4h19v5l-9.5-4.75L2.5 20.5v-5Z" />
+      <path d="M3 3h18v2H3V3Zm0 4h18v2H3V7Zm0 4h18v10l-9-5-9 5V11Z" />
     </svg>
   );
 }
@@ -79,7 +80,7 @@ function YouTubeIcon() {
       aria-hidden="true"
       className="h-4 w-4 shrink-0 fill-current"
     >
-      <path d="M23.498 6.186a2.997 2.997 0 0 0-2.11-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.388.566a2.997 2.997 0 0 0-2.11 2.12C0 8.075 0 12 0 12s0 3.925.502 5.814a2.997 2.997 0 0 0 2.11 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.388-.566a2.997 2.997 0 0 0 2.11-2.12C24 15.925 24 12 24 12s0-3.925-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z" />
+      <path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.39.58A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.87.58 9.39.58 9.39.58s7.52 0 9.39-.58a3 3 0 0 0 2.11-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.75 15.5v-7l6 3.5-6 3.5Z" />
     </svg>
   );
 }
@@ -119,20 +120,20 @@ const socialLinks = [
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-heal-navy text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-14">
-          {/* Brand */}
-          <div className="max-w-md">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+    <footer className="border-t border-heal-border bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          {/* Institution */}
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
               Institution
+            </h2>
+
+            <p className="mt-4 max-w-sm text-sm leading-7 text-heal-slate">
+              Healthcare Education &amp; Awareness Lab
             </p>
 
-            <p className="mt-4 max-w-sm text-sm font-semibold leading-6 text-white">
-              Healthcare Education & Awareness Lab
-            </p>
-
-            <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">
+            <p className="mt-3 max-w-sm text-sm leading-7 text-heal-slate">
               Advancing health education, journalism, documentation, digital
               health, and community engagement through purposeful communication.
             </p>
@@ -140,19 +141,19 @@ export default function SiteFooter() {
 
           {/* Explore */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
               Explore
-            </p>
+            </h2>
 
             <nav
-              className="mt-4 flex flex-col gap-2"
               aria-label="Footer navigation"
+              className="mt-4 flex flex-col gap-3"
             >
               {exploreLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="w-fit rounded-sm py-1 text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                  className="w-fit text-sm text-heal-slate transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
                 >
                   {link.label}
                 </Link>
@@ -160,138 +161,109 @@ export default function SiteFooter() {
             </nav>
           </div>
 
-          {/* Social */}
+          {/* Follow */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
               Follow
-            </p>
+            </h2>
 
             <nav
-              className="mt-4 flex flex-col gap-2"
               aria-label="HEAL social media"
+              className="mt-4 flex flex-col gap-3"
             >
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Follow on ${social.label}`}
-                    className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
-                  >
-                    <Icon />
-                    <span>{social.label}</span>
-                  </a>
-                );
-              })}
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-fit items-center gap-3 text-sm text-heal-slate transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                >
+                  <Icon />
+                  <span>{label}</span>
+                </a>
+              ))}
             </nav>
           </div>
 
           {/* Community */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-heal-gold">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-heal-navy">
               Community
-            </p>
-
-            <h2 className="mt-5 text-lg font-extrabold">
-              Stay connected with HEAL
             </h2>
 
-            <p className="mt-3 text-sm leading-6 text-slate-300">
+            <h3 className="mt-4 text-base font-semibold text-heal-navy">
+              Stay connected with HEAL
+            </h3>
+
+            <p className="mt-3 text-sm leading-7 text-heal-slate">
               Follow our health education, awareness, publications, and
               community updates on WhatsApp.
             </p>
 
-            <div className="mt-6 flex flex-col gap-3">
+            <div className="mt-5 flex flex-col gap-3">
               <a
                 href="https://whatsapp.com/channel/0029Vb8RkZqA2pL7Pz93VH0F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm font-semibold text-slate-300 transition-all duration-200 hover:translate-x-1 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-heal-navy focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
-                <span
-                  className="relative flex h-2 w-2 shrink-0 items-center justify-center"
-                  aria-hidden="true"
-                >
-                  <span className="absolute h-2 w-2 rounded-full bg-heal-emerald opacity-30 transition-transform duration-300 group-hover:scale-150 motion-safe:animate-pulse" />
-                  <span className="relative h-2 w-2 rounded-full bg-heal-emerald" />
-                </span>
-
-                <span>WhatsApp Channel</span>
-
-                <span
-                  aria-hidden="true"
-                  className="ml-1 inline-block opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100"
-                >
-                  ↗
-                </span>
+                WhatsApp Channel ↗
               </a>
 
               <a
                 href="https://chat.whatsapp.com/H5Jmb1weV5xDoMZImy8kku?s=cl&p=i&mlu=4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-11 w-fit items-center gap-3 rounded-sm text-sm font-semibold text-slate-300 transition-all duration-200 hover:translate-x-1 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+                className="w-fit text-sm font-medium text-heal-emerald transition-colors hover:text-heal-navy focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
-                <span
-                  className="relative flex h-2 w-2 shrink-0 items-center justify-center"
-                  aria-hidden="true"
-                >
-                  <span className="absolute h-2 w-2 rounded-full bg-heal-emerald opacity-30 transition-transform duration-300 group-hover:scale-150 motion-safe:animate-pulse" />
-                  <span className="relative h-2 w-2 rounded-full bg-heal-emerald" />
-                </span>
-
-                <span>WhatsApp Community</span>
-
-                <span
-                  aria-hidden="true"
-                  className="ml-1 inline-block opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100"
-                >
-                  ↗
-                </span>
+                WhatsApp Community ↗
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="flex flex-col gap-5 border-t border-white/15 py-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-col gap-2">
-            <p>
-              © {new Date().getFullYear()} Healthcare Education & Awareness Lab.
-              All rights reserved.
-            </p>
+        {/* Bottom */}
+        <div className="mt-12 flex flex-col gap-4 border-t border-heal-border pt-6 text-sm text-heal-slate sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © 2026 Healthcare Education &amp; Awareness Lab. All rights
+            reserved.
+          </p>
 
-            <p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+            <span>
               Built with passion by{" "}
               <a
                 href="https://www.linkedin.com/in/abdulraheemolurode25"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-[#c9a44c] transition-colors hover:text-[#008f6b] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c9a44c]"
+                style={{
+                  color: "#c9a44c",
+                  fontWeight: 700,
+                }}
+                className="transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
               >
                 AbdulRaheem Olurode
               </a>
-            </p>
-          </div>
+            </span>
 
-          <div className="flex items-center gap-5">
-            <Link
-              href="/privacy"
-              className="transition-colors hover:text-white"
-            >
-              Privacy
-            </Link>
+            <span className="hidden text-heal-border sm:inline">•</span>
 
-            <Link
-              href="/terms"
-              className="transition-colors hover:text-white"
-            >
-              Terms
-            </Link>
+            <div className="flex gap-4">
+              <Link
+                href="/privacy"
+                className="transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+              >
+                Privacy
+              </Link>
+
+              <Link
+                href="/terms"
+                className="transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+              >
+                Terms
+              </Link>
+            </div>
           </div>
         </div>
       </div>
