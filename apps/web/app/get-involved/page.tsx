@@ -1,4 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Get Involved",
+  description:
+    "Collaborate, contribute, or partner with HEAL Community to advance healthcare education, health communication, journalism, documentation, digital health, and community engagement.",
+  alternates: {
+    canonical: "/get-involved",
+  },
+  openGraph: {
+    title: "Get Involved | HEAL Community",
+    description:
+      "Collaborate, contribute, or partner with HEAL Community to advance healthcare education, health communication, journalism, documentation, digital health, and community engagement.",
+    url: "/get-involved",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Get Involved | HEAL Community",
+    description:
+      "Collaborate, contribute, or partner with HEAL Community to advance healthcare education, health communication, journalism, documentation, digital health, and community engagement.",
+  },
+};
 
 const pathways = [
   {
