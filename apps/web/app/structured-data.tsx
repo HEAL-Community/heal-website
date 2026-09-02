@@ -19,11 +19,24 @@ export default function StructuredData() {
     ],
   };
 
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://healcommunity.net/#website",
+    name: "HEAL Community",
+    url: "https://healcommunity.net",
+    description:
+      "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
+    publisher: {
+      "@id": "https://healcommunity.net/#organization",
+    },
+  };
+
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(organization),
+        __html: JSON.stringify([organization, website]),
       }}
     />
   );
