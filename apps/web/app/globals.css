@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   --heal-navy: #0b1f3a;
   --heal-emerald: #008f6b;
@@ -16,21 +14,6 @@
 
   --radius-sm: 0.25rem;
   --shadow-soft: 0 8px 24px rgb(11 31 58 / 0.08);
-}
-
-.dark {
-  --heal-navy: #f1f5f9;
-  --heal-emerald: #20b486;
-  --heal-gold: #d6b45c;
-  --heal-slate-dark: #e2e8f0;
-  --heal-slate: #94a3b8;
-  --heal-border: #334155;
-  --heal-surface: #111827;
-
-  --background: #0b1220;
-  --foreground: #f1f5f9;
-
-  --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.25);
 }
 
 @theme inline {
@@ -50,10 +33,6 @@ html {
   scroll-behavior: smooth;
   background: var(--background);
   color-scheme: light;
-}
-
-html.dark {
-  color-scheme: dark;
 }
 
 body {

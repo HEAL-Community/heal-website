@@ -83,33 +83,13 @@ export const metadata: Metadata = {
   },
 };
 
-const themeScript = `
-(function () {
-  try {
-    var storedTheme = localStorage.getItem("heal-theme");
-    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    var shouldUseDark =
-      storedTheme === "dark" ||
-      (storedTheme !== "light" && prefersDark);
-
-    document.documentElement.classList.toggle("dark", shouldUseDark);
-  } catch (error) {
-    // Ignore theme initialization errors.
-  }
-})();
-`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
-
+    <html lang="en">
       <body className={`${manrope.variable} antialiased`}>
         <StructuredData />
         <SiteHeader />
