@@ -1,4 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Initiatives",
+  description:
+    "Explore HEAL Community initiatives in health education and awareness, health journalism, healthcare documentation, and digital health, connecting healthcare knowledge with communication, technology, and communities.",
+  alternates: {
+    canonical: "/initiatives",
+  },
+  openGraph: {
+    title: "Initiatives | HEAL Community",
+    description:
+      "Explore HEAL Community initiatives in health education and awareness, health journalism, healthcare documentation, and digital health.",
+    url: "/initiatives",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Initiatives | HEAL Community",
+    description:
+      "Explore HEAL Community initiatives in health education and awareness, health journalism, healthcare documentation, and digital health.",
+  },
+};
 
 const initiatives = [
   {
@@ -92,10 +115,14 @@ export default function InitiativesPage() {
                 className="grid gap-8 border-b border-heal-border py-12 lg:grid-cols-12 lg:gap-12"
               >
                 <div className="lg:col-span-1">
-                  <p className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold" aria-hidden="true">
+                  <p
+                    className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold"
+                    aria-hidden="true"
+                  >
                     {String(index + 1).padStart(2, "0")}
                   </p>
                 </div>
+
                 {/* Status */}
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3">
