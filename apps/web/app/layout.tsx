@@ -70,12 +70,21 @@ export const metadata: Metadata = {
     title: "HEAL Community",
     description:
       "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
+    images: [
+      {
+        url: "/opengraph-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "HEAL Community — Healthcare Education & Awareness Lab",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "HEAL Community",
     description:
       "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
+    images: ["/opengraph-logo.png"],
   },
   robots: {
     index: true,
