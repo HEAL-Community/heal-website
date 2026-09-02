@@ -51,7 +51,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${BASE_URL}${route.path}`,
-    lastModified: new Date(),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
@@ -60,7 +59,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((article) => article.slug)
     .map((article) => ({
       url: `${BASE_URL}/articles/${article.slug}`,
-      lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));
