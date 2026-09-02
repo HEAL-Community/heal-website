@@ -1,4 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "What We Do",
+  description:
+    "Explore how HEAL Community advances healthcare education, health journalism, healthcare documentation, health communication, digital health, research, community engagement, and healthcare innovation.",
+  alternates: {
+    canonical: "/what-we-do",
+  },
+  openGraph: {
+    title: "What We Do | HEAL Community",
+    description:
+      "Explore how HEAL Community advances healthcare education, health journalism, healthcare documentation, health communication, digital health, research, community engagement, and healthcare innovation.",
+    url: "/what-we-do",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "What We Do | HEAL Community",
+    description:
+      "Explore how HEAL Community advances healthcare education, health journalism, healthcare documentation, health communication, digital health, research, community engagement, and healthcare innovation.",
+  },
+};
 
 const areas = [
   {
@@ -46,36 +69,34 @@ const areas = [
 export default function WhatWeDoPage() {
   return (
     <main>
-{/* HERO */}
-<section className="heal-ambient heal-grid heal-grain relative border-b border-heal-border bg-white">
-  <div className="heal-orb -right-24 -top-24" />
+      {/* HERO */}
+      <section className="heal-ambient heal-grid heal-grain relative border-b border-heal-border bg-white">
+        <div className="heal-orb -right-24 -top-24" />
 
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    <div className="relative grid gap-14 py-20 sm:py-24 lg:grid-cols-12 lg:gap-8 lg:py-28">
-      <div className="relative z-10 lg:col-span-8">
-        <p className="heal-reveal text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
-          Our work
-        </p>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative grid gap-14 py-20 sm:py-24 lg:grid-cols-12 lg:gap-8 lg:py-28">
+            <div className="relative z-10 lg:col-span-8">
+              <p className="heal-reveal text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
+                Our work
+              </p>
 
-        <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
-          We move healthcare knowledge forward.
-        </h1>
-      </div>
+              <h1 className="heal-reveal heal-reveal-delay-1 mt-7 max-w-5xl text-5xl font-extrabold sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.05em] text-heal-navy">
+                We move healthcare knowledge forward.
+              </h1>
+            </div>
 
-      <div className="relative z-10 lg:col-span-4 lg:self-end">
-        <div className="heal-glass heal-interactive heal-reveal heal-reveal-delay-2 max-w-md border-l-2 border-l-heal-emerald p-6 sm:p-7">
-          <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
-            From evidence and expertise to communication, understanding, and
-            action, we build the pathways through which healthcare knowledge
-            reaches people and communities.
-          </p>
+            <div className="relative z-10 lg:col-span-4 lg:self-end">
+              <div className="heal-glass heal-interactive heal-reveal heal-reveal-delay-2 max-w-md border-l-2 border-l-heal-emerald p-6 sm:p-7">
+                <p className="text-base leading-7 text-heal-slate-dark sm:text-lg">
+                  From evidence and expertise to communication, understanding,
+                  and action, we build the pathways through which healthcare
+                  knowledge reaches people and communities.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       {/* AREAS OF WORK */}
       <section className="bg-white">
@@ -87,7 +108,10 @@ export default function WhatWeDoPage() {
                 className="grid gap-8 border-b border-heal-border py-14 sm:py-16 lg:grid-cols-12 lg:gap-8 lg:py-20"
               >
                 <div className="lg:col-span-1">
-                  <p className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold" aria-hidden="true">
+                  <p
+                    className="font-mono text-xs font-bold tracking-[0.18em] text-heal-gold"
+                    aria-hidden="true"
+                  >
                     {String(index + 1).padStart(2, "0")}
                   </p>
                 </div>
