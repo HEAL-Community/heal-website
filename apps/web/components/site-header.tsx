@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -35,6 +35,24 @@ function MoonIcon() {
   );
 }
 
+function SunIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+  );
+}
+
 function MenuIcon({ open }: { open: boolean }) {
   return (
     <span
@@ -65,7 +83,30 @@ function MenuIcon({ open }: { open: boolean }) {
 export default function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [themeReady, setThemeReady] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("heal-theme");
+
+    if (storedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setDarkMode(true);
+    } else if (storedTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      setDarkMode(false);
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
+      document.documentElement.classList.toggle("dark", prefersDark);
+      setDarkMode(prefersDark);
+    }
+
+    setThemeReady(true);
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -85,6 +126,14 @@ export default function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  const toggleTheme = () => {
+    const nextTheme = !darkMode;
+
+    document.documentElement.classList.toggle("dark", nextTheme);
+    localStorage.setItem("heal-theme", nextTheme ? "dark" : "light");
+    setDarkMode(nextTheme);
+  };
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -122,8 +171,8 @@ export default function SiteHeader() {
                 aria-current={active ? "page" : undefined}
                 className={`group relative rounded-sm py-3 text-[13px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold ${
                   active
-                    ? "text-heal-navy"
-                    : "text-heal-slate-dark hover:text-heal-emerald"
+                    ? "text-heal-navy dark:text-white"
+                    : "text-heal-slate-dark hover:text-heal-emerald dark:text-white/80 dark:hover:text-heal-emerald"
                 }`}
               >
                 {item.label}
@@ -144,15 +193,18 @@ export default function SiteHeader() {
             aria-hidden="true"
           />
 
-          {/* Dark Mode — Coming Soon */}
+          {/* Theme Toggle */}
           <button
             type="button"
-            disabled
-            className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-full text-heal-navy/40"
-            aria-label="Dark mode coming soon"
-            title="Dark mode coming soon"
+            onClick={toggleTheme}
+            disabled={!themeReady}
+            className="flex h-9 w-9 items-center justify-center rounded-full text-heal-navy transition-colors hover:bg-heal-slate/10 hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-white dark:hover:bg-white/10"
+            aria-label={
+              darkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
-            <MoonIcon />
+            {darkMode ? <SunIcon /> : <MoonIcon />}
           </button>
 
           <Link
@@ -160,7 +212,7 @@ export default function SiteHeader() {
             aria-current={
               isActivePath(pathname, "/get-involved") ? "page" : undefined
             }
-            className="rounded-sm py-3 text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+            className="rounded-sm py-3 text-[13px] font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-white dark:hover:text-heal-emerald"
           >
             Get involved <span aria-hidden="true">→</span>
           </Link>
@@ -168,15 +220,18 @@ export default function SiteHeader() {
 
         {/* Mobile Actions */}
         <div className="flex items-center gap-1 lg:hidden">
-          {/* Dark Mode — Coming Soon */}
+          {/* Theme Toggle */}
           <button
             type="button"
-            disabled
-            className="flex min-h-11 min-w-11 cursor-not-allowed items-center justify-center rounded-sm text-heal-navy/40"
-            aria-label="Dark mode coming soon"
-            title="Dark mode coming soon"
+            onClick={toggleTheme}
+            disabled={!themeReady}
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-white dark:hover:text-heal-emerald"
+            aria-label={
+              darkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
-            <MoonIcon />
+            {darkMode ? <SunIcon /> : <MoonIcon />}
           </button>
 
           {/* Mobile Menu */}
@@ -184,7 +239,7 @@ export default function SiteHeader() {
             ref={menuButtonRef}
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold"
+            className="flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-sm text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-heal-gold dark:text-white dark:hover:text-heal-emerald"
             aria-label={
               menuOpen ? "Close navigation menu" : "Open navigation menu"
             }
@@ -224,7 +279,7 @@ export default function SiteHeader() {
                   className={`border-b border-heal-border py-4 text-base font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold ${
                     active
                       ? "text-heal-emerald"
-                      : "text-heal-navy hover:text-heal-emerald"
+                      : "text-heal-navy hover:text-heal-emerald dark:text-white dark:hover:text-heal-emerald"
                   }`}
                 >
                   {item.label}
@@ -236,7 +291,7 @@ export default function SiteHeader() {
               href="/get-involved"
               onClick={closeMenu}
               tabIndex={menuOpen ? 0 : -1}
-              className="mt-4 inline-flex w-fit items-center gap-2 rounded-sm py-3 text-sm font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold"
+              className="mt-4 inline-flex w-fit items-center gap-2 rounded-sm py-3 text-sm font-bold text-heal-navy transition-colors hover:text-heal-emerald focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heal-gold dark:text-white dark:hover:text-heal-emerald"
             >
               Get involved <span aria-hidden="true">→</span>
             </Link>
