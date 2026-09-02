@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import {PortableText} from '@portabletext/react'
 import {notFound} from 'next/navigation'
 import {getArticle} from '@/lib/queries'
@@ -5,6 +6,61 @@ import {urlFor} from '@/lib/image'
 
 type Props = {
   params: Promise<{slug: string}>
+}
+
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {slug} = await params
+  const article = await getArticle(slug)
+
+  if (!article) {
+    return {
+      title: 'Article Not Found',
+      robots: {
+        index: false,
+        follow: false,
+      },
+    }
+  }
+
+  const description =
+    article.excerpt ||
+    'Healthcare knowledge, insight, and stories from HEAL Community — Healthcare Education & Awareness Lab.'
+
+  const imageUrl = article.featuredImage
+    ? urlFor(article.featuredImage).width(1600).auto('format').url()
+    : 'https://healcommunity.net/opengraph-logo.png'
+
+  return {
+    title: article.title,
+    description,
+    alternates: {
+      canonical: `/articles/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title: article.title,
+      description,
+      url: `/articles/${slug}`,
+      siteName: 'HEAL Community',
+      images: [
+        {
+          url: imageUrl,
+          alt: article.title,
+        },
+      ],
+      ...(article.publishedAt
+        ? {
+            publishedTime: article.publishedAt,
+          }
+        : {}),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description,
+      images: [imageUrl],
+    },
+  }
 }
 
 const portableTextComponents = {
@@ -30,14 +86,24 @@ const portableTextComponents = {
   },
   list: {
     bullet: ({children}: {children?: React.ReactNode}) => (
-      <ul className="mb-6 list-disc space-y-2 pl-6 text-lg leading-8 text-heal-slate-dark">{children}</ul>
+      <ul className="mb-6 list-disc space-y-2 pl-6 text-lg leading-8 text-heal-slate-dark">
+        {children}
+      </ul>
     ),
     number: ({children}: {children?: React.ReactNode}) => (
-      <ol className="mb-6 list-decimal space-y-2 pl-6 text-lg leading-8 text-heal-slate-dark">{children}</ol>
+      <ol className="mb-6 list-decimal space-y-2 pl-6 text-lg leading-8 text-heal-slate-dark">
+        {children}
+      </ol>
     ),
   },
   marks: {
-    link: ({children, value}: {children?: React.ReactNode; value?: {href?: string}}) => (
+    link: ({
+      children,
+      value,
+    }: {
+      children?: React.ReactNode
+      value?: {href?: string}
+    }) => (
       <a
         href={value?.href}
         className="font-semibold text-heal-emerald underline decoration-heal-emerald/40 underline-offset-4 transition-colors hover:text-heal-navy"
@@ -69,17 +135,25 @@ export default async function ArticlePage({params}: Props) {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-heal-emerald">
                 {article.contentType || 'Publication'}
               </p>
+
               <h1 className="mt-7 text-[clamp(2.75rem,7vw,6rem)] font-extrabold leading-[0.98] tracking-[-0.05em] text-heal-navy">
                 {article.title}
               </h1>
+
               {article.excerpt && (
                 <p className="mt-8 max-w-2xl text-xl leading-8 text-heal-slate-dark sm:text-2xl sm:leading-9">
                   {article.excerpt}
                 </p>
               )}
+
               {article.publishedAt && (
                 <p className="mt-8 border-t border-heal-border pt-5 text-xs font-bold uppercase tracking-[0.16em] text-heal-slate">
-                  Published {new Date(article.publishedAt).toLocaleDateString('en-NG', {year: 'numeric', month: 'long', day: 'numeric'})}
+                  Published{' '}
+                  {new Date(article.publishedAt).toLocaleDateString('en-NG', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
                 </p>
               )}
             </div>
@@ -88,12 +162,19 @@ export default async function ArticlePage({params}: Props) {
 
         {imageUrl && (
           <figure className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-            <img src={imageUrl} alt={article.title} className="block max-h-[70vh] w-full object-cover" />
+            <img
+              src={imageUrl}
+              alt={article.title}
+              className="block max-h-[70vh] w-full object-cover"
+            />
           </figure>
         )}
 
         <div className="mx-auto max-w-3xl px-6 py-12 lg:py-20">
-          <PortableText value={article.body} components={portableTextComponents} />
+          <PortableText
+            value={article.body}
+            components={portableTextComponents}
+          />
         </div>
       </article>
     </main>
