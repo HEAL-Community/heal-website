@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getArticles } from "@/lib/queries";
+
+export const metadata: Metadata = {
+  title: "Knowledge Hub",
+  description:
+    "Explore healthcare knowledge, evidence, insight, research, journalism, and stories from HEAL Community at the intersection of healthcare, communication, technology, and community.",
+  alternates: {
+    canonical: "/articles",
+  },
+  openGraph: {
+    title: "Knowledge Hub | HEAL Community",
+    description:
+      "Explore healthcare knowledge, evidence, insight, research, journalism, and stories from HEAL Community.",
+    url: "/articles",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Knowledge Hub | HEAL Community",
+    description:
+      "Explore healthcare knowledge, evidence, insight, research, journalism, and stories from HEAL Community.",
+  },
+};
 
 type Article = {
   _id: string;
