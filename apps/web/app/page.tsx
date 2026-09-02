@@ -3,24 +3,24 @@ import Link from "next/link";
 import { getArticles } from "@/lib/queries";
 
 export const metadata: Metadata = {
-  title: "Healthcare Education, Awareness & Communication",
+  title: "HEAL Community",
   description:
-    "HEAL advances health education, journalism, healthcare documentation, digital health, research communication, and community engagement through purposeful communication.",
+    "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Healthcare Education, Awareness & Communication",
+    title: "HEAL Community",
     description:
-      "HEAL advances health education, journalism, healthcare documentation, digital health, research communication, and community engagement through purposeful communication.",
+      "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
     url: "/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Healthcare Education, Awareness & Communication",
+    title: "HEAL Community",
     description:
-      "HEAL advances health education, journalism, healthcare documentation, digital health, research communication, and community engagement through purposeful communication.",
+      "HEAL Community — Healthcare Education & Awareness Lab advancing health education, health journalism, healthcare documentation, digital health, and community engagement.",
   },
 };
 
